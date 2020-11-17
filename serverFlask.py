@@ -3,11 +3,14 @@ from flask import Flask, request
 from flask_cors import CORS
 import jsonify
 import orm
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine,connectors
 from sqlalchemy.orm import sessionmaker
-
+from orm import metadata, start_mappers
+from movil import Movil
 APP = Flask(__name__)
 CORS(APP)
+
+
 
 # CONTROLADOR_BOT = ControladorBot()
 

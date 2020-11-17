@@ -8,8 +8,16 @@ metadata = MetaData()
 # si o si aca tiene que haber un primary key. sino tira error el test
 tabla_movil = Table(
     'movil', metadata,
-    Column('id', Integer, primary_key=True),
+    Column('id_movil', Integer, primary_key=True, index=True),
     Column('patente', String(20))
+)
+
+tabla_servicio = Table(
+    'servicio', metadata,
+    Column('id_servicio', Integer, primary_key=True, index=True),
+    Column('estado', String(20)),
+    Column('datos', String(300)),
+    Column('id_movil', ForeignKey('movil.id_movil'))
 )
 
 
