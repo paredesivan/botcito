@@ -1,7 +1,7 @@
 from movil import Movil
 
 
-def test_crear_movil(session):
+def test_crear_movil_raw(session):
     session.execute(
         'INSERT INTO movil (id_movil, patente)'
         ' VALUES ("1",  "123abc")'
@@ -10,7 +10,7 @@ def test_crear_movil(session):
     assert session.query(Movil).all() == expected
 
 
-def test_crear_loco(session):
+def test_crear_movil_orm_schema(session):
     movil = Movil(2, "4343av")
     session.add(movil)
     session.commit()

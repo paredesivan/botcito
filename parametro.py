@@ -2,7 +2,7 @@
 class Parametro:
     def __init__(self, horarios='6,13,20',maximo_intentos_fallidos=3):
         # self.id_empresa=1
-        # llamarasqlalchemy y setear valores
+        # llamar a sqlalchemy y setear valores
         # try:
         #     parametros=SqlRepositoryParametro.get(self.id_empresa)
         # except:

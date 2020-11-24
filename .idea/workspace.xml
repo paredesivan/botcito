@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f27cd123-2beb-4b90-a20a-bbabce7b39b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/pylint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/botcitoLog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/botcitoLog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movil.py" beforeDir="false" afterPath="$PROJECT_DIR$/movil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/orm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverFlask.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverFlask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/servicio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_movil.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_movil.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,17 +31,23 @@
   </component>
   <component name="ProjectId" id="1kLQ2uOezHvmtfjcVrVECGypTcH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BotWsp" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.test_movil">
     <configuration name="serverFlask" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -53,6 +62,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/serverFlask.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -74,6 +84,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_movil.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -97,8 +108,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605477648311</updated>
+      <workItem from="1606154411736" duration="1407000" />
+      <workItem from="1606172703711" duration="1308000" />
     </task>
+    <task id="LOCAL-00001" summary="jiojioji">
+      <created>1605582470479</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605582470479</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -112,5 +136,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="jiojioji" />
+    <option name="LAST_COMMIT_MESSAGE" value="jiojioji" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="460" y="118" key="FileChooserDialogImpl" timestamp="1606161817041">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1606161817041" />
   </component>
 </project>
