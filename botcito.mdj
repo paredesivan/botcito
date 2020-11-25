@@ -360,7 +360,7 @@
 											"top": 685.5,
 											"width": 126.8134765625,
 											"height": 13,
-											"text": "controladorbot"
+											"text": "controladorBot"
 										},
 										{
 											"_type": "LabelView",
@@ -6277,13 +6277,30 @@
 											"height": 13,
 											"text": "+nuevo_mensaje()",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF1/YLlCq81dM4=",
+											"_parent": {
+												"$ref": "AAAAAAF13c2mNUf7xv4="
+											},
+											"model": {
+												"$ref": "AAAAAAF1/YLk368apIA="
+											},
+											"font": "Arial;13;0",
+											"left": 428.606201171875,
+											"top": 874,
+											"width": 108.037109375,
+											"height": 13,
+											"text": "+estado_servicio()",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 423.606201171875,
 									"top": 854,
 									"width": 118.037109375,
-									"height": 23
+									"height": 38
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -6319,7 +6336,7 @@
 							"left": 423.606201171875,
 							"top": 819,
 							"width": 118.037109375,
-							"height": 58,
+							"height": 73,
 							"nameCompartment": {
 								"$ref": "AAAAAAF13c2mNEf1Kgg="
 							},
@@ -8603,7 +8620,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "controladorbot",
+					"name": "controladorBot",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -10018,6 +10035,14 @@
 								"$ref": "AAAAAAF13c2mNEfyoEE="
 							},
 							"name": "nuevo_mensaje"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF1/YLk368apIA=",
+							"_parent": {
+								"$ref": "AAAAAAF13c2mNEfyoEE="
+							},
+							"name": "estado_servicio"
 						}
 					]
 				},
