@@ -14,7 +14,7 @@ class ModoPremium(Modo):
     def finalizar_servicio(self):
         pass
 
-    def brindar_estado(self):
+    def estado_servicio(self):
         pass
 
     def confirmar(self):

@@ -1,5 +1,4 @@
 import sqlalchemy
-
 from fakeRepository import FakeRepository
 
 

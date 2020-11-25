@@ -3,12 +3,13 @@ from excepciones import IntentosFallidosException, CharlaInactiva
 
 class Charla:
     def __init__(self, datos):
-        self.id = datos['id']
-        self.telefono_origen = datos['telefono_origen']
         self.estado = datos['estado']
-        self.telefono_destino = datos['telefono_destino']
-        self.usuario_responsable = datos['usuario_responsable']
+        self.id = datos['id']
         self.intentos_fallidos = datos['intentos_fallidos']
+        self.telefono_destino = datos['telefono_destino']
+        self.telefono_origen = datos['telefono_origen']
+        self.usuario_responsable = datos['usuario_responsable']
+
 
 
 

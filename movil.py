@@ -1,7 +1,11 @@
 class Movil:
-    def __init__(self,_id,_patente):
-        self.id_movil=_id
-        self.patente=_patente
+    def __init__(self, _id, _patente, chofer):
+        self.chofer = chofer
+        self.id_movil = _id
+        self.patente = _patente
+
+
+
 
     def obtener_id(self):
         return self.id_movil
