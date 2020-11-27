@@ -2,45 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f27cd123-2beb-4b90-a20a-bbabce7b39b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/adapters/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adapters/fake_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adapters/orm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adapters/repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adapters/sql_repository_charla.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/log.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/mensaje.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/servicio.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrypoints/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrypoints/flask_app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environ.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_layers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/single.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModoPremium.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/modo_premium.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/botcito.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/botcito.mdj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogoCharla.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layers/catalogo_charla.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charla.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/charla.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controladorBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layers/controlador_bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/excepciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/excepciones.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fakeRepository.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/falcon.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrypoints/falcon_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mensaje.py" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modo.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/modo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modoBasico.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/modo_basico.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movil.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/parametro.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/parametro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverFlask.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicio.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlRepositoryCharla.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/tag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_movil.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/test_movil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapters/orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/orm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/tag.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/tag.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +143,7 @@
       <workItem from="1606231170940" duration="2117000" />
       <workItem from="1606268831449" duration="2446000" />
       <workItem from="1606354167129" duration="6096000" />
-      <workItem from="1606435816738" duration="8913000" />
+      <workItem from="1606435816738" duration="9959000" />
     </task>
     <task id="LOCAL-00001" summary="jiojioji">
       <created>1605582470479</created>
@@ -202,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606276425436</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="jiojioji">
+      <created>1606444768738</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606444768738</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,10 +206,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="410" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1360.728@0.0.1360.728" timestamp="1606439521169" />
-    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1606276447609">
+    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1606444767208">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1606276447609" />
+    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1606444767208" />
     <state x="210" y="18" key="DBNavigator.ProjectSettingsDialog" timestamp="1606359841704">
       <screen x="0" y="0" width="1360" height="728" />
     </state>

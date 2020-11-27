@@ -1,6 +1,6 @@
 class Tag:
     def __init__(self, datos):
-        self.id = datos['id_tag']
+        self.id_tag = datos['id_tag']
         self.texto = datos['texto']
         self.texto_para_usuario = ['texto_para_usuario']
 

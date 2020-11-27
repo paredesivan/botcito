@@ -1,4 +1,4 @@
-from sqlalchemy import (Table, MetaData, Column, Integer, String, SmallInteger,Boolean, Date, ForeignKey)
+from sqlalchemy import (Table, MetaData, Column, Integer, String, SmallInteger, Boolean, Date, ForeignKey)
 from sqlalchemy.orm import mapper, relationship
 
 from domain.charla import Charla
@@ -24,8 +24,8 @@ tabla_charla = Table(
     'charla', metadata,
     Column('id_charla', Integer, primary_key=True, index=True),
     Column('telefono_origen', String(50)),
-    Column('estado', String(20), server_default='activa',index=True),
-    Column('telefono_destino', String(20),index=True),
+    Column('estado', String(20), server_default='activa', index=True),
+    Column('telefono_destino', String(20), index=True),
     Column('usuario_responsable', String(50)),
     Column('intentos_fallidos', Integer, server_default=0),
 )
@@ -39,7 +39,7 @@ tabla_log = Table(
     Column('fecha_hora_envio', String(50)),
     Column('opcion', String(40), index=True),
     Column('estado_envio', String(20), server_default='nuevo'),
-    Column('id_charla',ForeignKey('charla.id_charla'))
+    Column('id_charla', ForeignKey('charla.id_charla'))
 )
 
 tabla_modo = Table(
@@ -56,7 +56,7 @@ tabla_parametro = Table(
     Column('horarios', String(20), server_default='6,13,20'),
     Column('maximo_intentos_fallidos', Integer, server_default=3),
     Column('automatico_encendido', Boolean, server_default=False),
-    Column('modo',ForeignKey('modo.id_modo')),
+    Column('modo', ForeignKey('modo.id_modo')),
 )
 
 tabla_servicio = Table(
@@ -73,33 +73,33 @@ tabla_servicio = Table(
 # [_saludo,    buenos #hora bienvenido a #empresa,    saludo
 tabla_tag = Table(
     'tag', metadata,
-    Column('id', String(20), primary_key=True),
+    Column('id_tag', String(20), primary_key=True),
     Column('texto', String(200), nullable=False),
     Column('texto_para_usuario', String(30),
-    Column('id_modo',ForeignKey('modo.id_modo')))
+           Column('id_modo', ForeignKey('modo.id_modo')))
 )
 
 
 def start_mappers():
     # mapper(nombre de la clase, nombre objeto que devuelve Table)
-    mapper(Charla, tabla_charla)
-    mapper(Log, tabla_log)
-    mapper(Modo, tabla_modo)
-    mapper(Parametro, tabla_parametro)
-    mapper(Servicio, tabla_servicio)
-    mapper(Tag, tabla_tag)
+    charla_mapper = mapper(Charla, tabla_charla, properties={
+        'logs': relationship(Log, backref='charla', order_by=tabla_log.id_log)
+    })
+    log_mapper = mapper(Log, tabla_log)
+    modo_mapper = mapper(Modo, tabla_modo)
+    parametro_mapper = mapper(Parametro, tabla_parametro)
+    servicio_mapper = mapper(Servicio, tabla_servicio)
+    tag_mapper = mapper(Tag, tabla_tag)
 
-    # def start_mappers():
-    # donde dice model es la clase, y lo demas es la tabla
-    #     logger.info("Starting mappers")
-    #     lines_mapper = mapper(model.OrderLine, order_lines)
-    #     batches_mapper = mapper(model.Batch, batches, properties={
-    #         '_allocations': relationship(
-    #             lines_mapper,
-    #             secondary=allocations,
-    #             collection_class=set,
-    #         )
-    #     })
-    #     mapper(model.Product, products, properties={
-    #         'batches': relationship(batches_mapper)
-    #     })
+    # user = Table('user', metadata,
+    #              Column('id', Integer, primary_key=True)
+    #              )
+    # address = Table('address', metadata,
+    #                 Column('id', Integer, primary_key=True)
+    #                 )
+    #
+    # mapper(User, user, properties={
+    #     'addresses': relationship(Address, backref='user', order_by=address.c.id)
+    # })
+    #
+    # mapper(Address, address)
