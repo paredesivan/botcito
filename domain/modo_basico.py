@@ -1,7 +1,7 @@
-from modo import Modo
+from domain.modo import Modo
 class ModoBasico(Modo):
-    def __init__(self,id,nombre,texto_accion,funcion):
-        Modo.__init__(self,id,nombre,texto_accion,funcion)
+    def __init__(self,id_modo,nombre,texto_accion,funcion):
+        Modo.__init__(self,id_modo,nombre,texto_accion,funcion)
 
     def saludo(self):
         saludo = tag.obtener_saludo()
@@ -14,7 +14,7 @@ class ModoBasico(Modo):
         pass
     def estado_servicio(self):
         pass
-    def confirmar(self):
+    def confirmar_servicio(self):
         pass
     def datos_chofer(self):
         pass

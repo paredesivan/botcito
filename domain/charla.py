@@ -1,15 +1,13 @@
-from excepciones import IntentosFallidosException, CharlaInactiva
+from domain.excepciones import IntentosFallidosException, CharlaInactiva
 
 
 class Charla:
-    def __init__(self, datos):
-        self.estado = datos['estado']
-        self.id = datos['id']
-        self.intentos_fallidos = datos['intentos_fallidos']
-        self.telefono_destino = datos['telefono_destino']
-        self.telefono_origen = datos['telefono_origen']
-        self.usuario_responsable = datos['usuario_responsable']
-
+    def __init__(self,  estado, intentos_fallidos, telefono_destino, telefono_origen, usuario_responsable):
+        self.estado = estado
+        self.intentos_fallidos = intentos_fallidos
+        self.telefono_destino = telefono_destino
+        self.telefono_origen = telefono_origen
+        self.usuario_responsable = usuario_responsable
 
 
 

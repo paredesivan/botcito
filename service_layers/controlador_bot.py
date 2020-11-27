@@ -1,8 +1,8 @@
+from domain.parametro import Parametro
+from service_layers.catalogo_charla import CatalogoCharla
+from single import singleton
 
-from parametro import Parametro
-from catalogoCharla import CatalogoCharla
-
-
+@singleton
 class ControladorBot:
     def __init__(self):
         self.PARAMETRO = Parametro()
@@ -14,6 +14,7 @@ class ControladorBot:
 
 
     def nuevo_mensaje(self, mensaje):
+        pass
         # "hola quiero un movil"
 
 
@@ -58,6 +59,8 @@ class ControladorBot:
 
 
 
+    def estado_servicio(self,mensaje):
+        pass
 
 
 

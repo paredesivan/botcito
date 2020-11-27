@@ -1,9 +1,9 @@
-from modo import Modo
+from domain.modo import Modo
 
 
 class ModoPremium(Modo):
-    def __init__(self,id,nombre,texto_accion,funcion):
-        Modo.__init__(self,id,nombre,texto_accion,funcion)
+    def __init__(self,id_modo,nombre,texto_accion,funcion):
+        Modo.__init__(self,id_modo,nombre,texto_accion,funcion)
 
     def saludo(self):
         pass
@@ -17,7 +17,7 @@ class ModoPremium(Modo):
     def estado_servicio(self):
         pass
 
-    def confirmar(self):
+    def confirmar_servicio(self):
         pass
 
     def datos_chofer(self):

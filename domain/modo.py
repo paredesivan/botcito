@@ -1,6 +1,7 @@
-class Modo(abc.ABC):
-    def __init__(self, id, nombre, texto_accion, funcion):
-        self.id = id
+
+class Modo():
+    def __init__(self, id_modo, nombre, texto_accion, funcion):
+        self.id_modo = id_modo
         self.funcion = funcion
         self.nombre = nombre
         self.texto_accion = texto_accion
@@ -33,7 +34,7 @@ class Modo(abc.ABC):
 
 
 
-    def confirmar(self):
+    def confirmar_servicio(self):
         pass
 
 
