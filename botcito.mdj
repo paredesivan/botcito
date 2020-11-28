@@ -7315,7 +7315,7 @@
 											"top": 815,
 											"width": 157.89794921875,
 											"height": 13,
-											"text": "callprocessor"
+											"text": "callprocessor_adapter"
 										},
 										{
 											"_type": "LabelView",
@@ -7829,7 +7829,7 @@
 											"top": 711,
 											"width": 108.0244140625,
 											"height": 13,
-											"text": "atmsj"
+											"text": "atmsj_adapter"
 										},
 										{
 											"_type": "LabelView",
@@ -8854,7 +8854,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF13buVP9nntEU="
 							},
-							"name": "idmovil"
+							"name": "idmovil",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8862,7 +8863,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF13buVP9nntEU="
 							},
-							"name": "patente"
+							"name": "patente",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8870,7 +8872,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF13buVP9nntEU="
 							},
-							"name": "chofer"
+							"name": "chofer",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -9103,7 +9106,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF13bu+E9prWAQ="
 							},
-							"name": "id_charla"
+							"name": "id_charla",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -9986,7 +9990,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "callprocessor",
+					"name": "callprocessor_adapter",
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -10028,7 +10032,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "atmsj",
+					"name": "atmsj_adapter",
 					"operations": [
 						{
 							"_type": "UMLOperation",

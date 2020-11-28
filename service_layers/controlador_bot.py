@@ -34,7 +34,7 @@ class ControladorBot:
             # enviar mensaje o solo crearlo y que una tarea lo envie, podria setearlo como enviando???
             # salir
 
-        # comentario hay charla
+        # comentario: hay charla
         # self.charla_actual.esta_charla_activa()
         # obtener el modo de la charla
         # verficar si es uan palabra reservada del usuario segun el modo
@@ -46,11 +46,11 @@ class ControladorBot:
             # enviar mensaje o solo crearlo y que una tarea lo envie, podria setearlo como enviando???
             # salir
 
-        # comentario si no es una palabra del modo
+        # comentario: si no es una palabra del modo
         # si no es una opcion valida
             # self.charla_actual.incrementar_intentos_fallidos()
             # self.charla_actual.validar_intentos_fallidos(self.PARAMETRO.maximo_intentos_fallidos)
-        # es una opcion valida
+        # si es una opcion valida
             # setear opcion del log como seleccionada
             # marcar como inactivos las actuales
             # obtener accion a realizar (no buscar en la bd porque si la cambio a la bd en tiempo real se rompera)

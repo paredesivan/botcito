@@ -1,16 +1,43 @@
-from sqlalchemy import create_engine, connectors
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from service_layers.controlador_bot import ControladorBot
-import adapters.orm as orm
+from sqlalchemy import (Table, MetaData, Column, Integer, String, SmallInteger, Boolean, Date, ForeignKey)
+from sqlalchemy.orm import mapper, relationship
 
 
-CONTROLADOR_BOT = ControladorBot()
+from sqlalchemy.ext.declarative import declarative_base
 
-# The PostgreSQL dialect uses psycopg2 as the default DBAPI
-# igual se puede especificar que usara ese con postgresql+psycopg2 u otro postgresql+pg8000
-engine = create_engine('postgres://mzmqoonm:xhZeUWN5TPvYKQYAQdCelh2SSx2Wpjas@suleiman.db.elephantsql.com:5432/mzmqoonm')
+
+
+# engine = create_engine('postgres+psycopg2://mzmqoonm:xhZeUWN5TPvYKQYAQdCelh2SSx2Wpjas@suleiman.db.elephantsql.com:5432/mzmqoonm')
+
+
+metadata = MetaData()
+
+class User:
+    def __init__(self, telefono_origen):
+        self.telefono_origen = telefono_origen
+
+# este es el nombre que tendra la base de datos
+tabla = Table('user', metadata,
+             Column('telefono_origen', String(50), primary_key=True),
+             )
+
+mapper(User, tabla)
+
+engine = create_engine('postgres+psycopg2://mzmqoonm:xhZeUWN5TPvYKQYAQdCelh2SSx2Wpjas@suleiman.db.elephantsql.com:5432/mzmqoonm')
+
+
+metadata.create_all(engine)
+
 Session = sessionmaker(bind=engine)
+
 session = Session()
-orm.start_mappers()  # similar a crear schema supongo
+
+# a = User(telefono_origen="4")
+
+# session.add(a)
+
+# session.commit()
 
 
+# CONTROLADOR_BOT = ControladorBot()

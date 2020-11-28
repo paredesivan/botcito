@@ -1,13 +1,14 @@
 from domain.excepciones import ElementNotFoundException, ErrorAlActualizar
 from adapters.sql_repository_charla import SqlRepositoryCharla
 from single import singleton
+from main import Session
 
 @singleton
 class CatalogoCharla:
 
     def __init__(self):
         self.charlas = []
-        self.sqlrepository = SqlRepositoryCharla()
+        self.sqlrepository = SqlRepositoryCharla(Session)
         pass
 
 

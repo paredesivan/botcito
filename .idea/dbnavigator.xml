@@ -23,11 +23,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="5da19e97-96e3-4cd0-bc55-75293d3a364d">
-        <schema name="information_schema" object-types="function, sequence, table, view" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="5da19e97-96e3-4cd0-bc55-75293d3a364d">
@@ -168,8 +164,8 @@
           <port value="5432" />
           <database value="postgres" />
           <type value="USER_PASSWORD" />
-          <user value="" />
-          <deprecated-pwd value="" />
+          <user value="mzmqoonm" />
+          <deprecated-pwd value="eGhaZVVXTjVUUHZZS1FZQVFkQ2VsaDJTU3gyV3BqYXM=" />
         </database>
         <properties>
           <auto-commit value="false" />
@@ -365,14 +361,10 @@
           <content-type name="DTD" enabled="true" />
           <content-type name="HTML" enabled="true" />
           <content-type name="XHTML" enabled="true" />
-          <content-type name="CSS" enabled="true" />
           <content-type name="SQL" enabled="true" />
           <content-type name="PL/SQL" enabled="true" />
-          <content-type name="JavaScript" enabled="true" />
           <content-type name="JSON" enabled="true" />
           <content-type name="JSON5" enabled="true" />
-          <content-type name="YAML" enabled="true" />
-          <content-type name="Bash" enabled="true" />
         </content-types>
       </qualified-text-editor>
       <record-navigation>

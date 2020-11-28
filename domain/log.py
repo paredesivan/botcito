@@ -21,3 +21,8 @@ class Log:
     def seleccionado(self):
         # deberia buscar la opcion disponible y ponerla como seleccionada
         pass
+
+
+
+
+

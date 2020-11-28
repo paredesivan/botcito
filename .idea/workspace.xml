@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f27cd123-2beb-4b90-a20a-bbabce7b39b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ormvercomotrabaja.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/botcitoLog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/botcitoLog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/adapters/orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/orm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/tag.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/tag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botcito.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/botcito.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_layers/catalogo_charla.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layers/catalogo_charla.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_layers/controlador_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layers/controlador_bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +37,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -35,7 +44,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/service_layers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../libroDeArchitectureEnlazado" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -56,7 +65,7 @@
       <recent name="D:\CONGIT\botcitoLog\domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.environ">
+  <component name="RunManager" selected="Python.main">
     <configuration name="environ" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="botcitoLog" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -71,6 +80,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="D:\CONGIT\botcitoLog\environ.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="botcitoLog" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -125,12 +156,14 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.environ" />
         <item itemvalue="Python.test_movil" />
         <item itemvalue="Python.serverFlask" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f27cd123-2beb-4b90-a20a-bbabce7b39b4" name="Default Changelist" comment="" />
@@ -143,7 +176,8 @@
       <workItem from="1606231170940" duration="2117000" />
       <workItem from="1606268831449" duration="2446000" />
       <workItem from="1606354167129" duration="6096000" />
-      <workItem from="1606435816738" duration="9959000" />
+      <workItem from="1606435816738" duration="9976000" />
+      <workItem from="1606519004197" duration="552000" />
     </task>
     <task id="LOCAL-00001" summary="jiojioji">
       <created>1605582470479</created>
@@ -173,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606444768738</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="jiojioji">
+      <created>1606445816373</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606445816373</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,13 +225,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
@@ -206,38 +246,50 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="410" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1360.728@0.0.1360.728" timestamp="1606439521169" />
-    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1606444767208">
+    <state x="399" y="0" key="#main" timestamp="1606519373702">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1606444767208" />
+    <state x="399" y="0" key="#main/0.0.1360.728@0.0.1360.728" timestamp="1606519373702" />
+    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1606445815277">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1606445815277" />
+    <state x="452" y="308" width="354" height="318" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1606519690584">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="452" y="308" width="354" height="318" key="DBNavigator.ConnectionAuthenticationDialog/0.0.1360.728@0.0.1360.728" timestamp="1606519690584" />
     <state x="210" y="18" key="DBNavigator.ProjectSettingsDialog" timestamp="1606359841704">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="210" y="18" key="DBNavigator.ProjectSettingsDialog/0.0.1360.728@0.0.1360.728" timestamp="1606359841704" />
-    <state x="460" y="118" key="FileChooserDialogImpl" timestamp="1606355284812">
+    <state x="460" y="118" key="FileChooserDialogImpl" timestamp="1606514282040">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1606355284812" />
-    <state width="1316" height="183" key="GridCell.Tab.0.bottom" timestamp="1606362277935">
+    <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1606514282040" />
+    <state width="1316" height="191" key="GridCell.Tab.0.bottom" timestamp="1606520610487">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="183" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1606362277935" />
-    <state width="1316" height="183" key="GridCell.Tab.0.center" timestamp="1606362277935">
+    <state width="1316" height="191" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1606520610487" />
+    <state width="1316" height="191" key="GridCell.Tab.0.center" timestamp="1606520610487">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="183" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1606362277935" />
-    <state width="1316" height="183" key="GridCell.Tab.0.left" timestamp="1606362277935">
+    <state width="1316" height="191" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1606520610487" />
+    <state width="1316" height="191" key="GridCell.Tab.0.left" timestamp="1606520610487">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="183" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1606362277935" />
-    <state width="1316" height="183" key="GridCell.Tab.0.right" timestamp="1606362277935">
+    <state width="1316" height="191" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1606520610487" />
+    <state width="1316" height="191" key="GridCell.Tab.0.right" timestamp="1606520610487">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="183" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1606362277935" />
+    <state width="1316" height="191" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1606520610487" />
     <state x="260" y="98" key="IDE.errors.dialog" timestamp="1606437741153">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="260" y="98" key="IDE.errors.dialog/0.0.1360.728@0.0.1360.728" timestamp="1606437741153" />
+    <state x="181" y="0" key="SettingsEditor" timestamp="1606520779467">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="181" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1606520779467" />
     <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1606276407413">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -250,8 +302,5 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1606275381265" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/botcitoLog$abab.coverage" NAME="abab Coverage Results" MODIFIED="1606362066888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adapters" />
   </component>
 </project>
