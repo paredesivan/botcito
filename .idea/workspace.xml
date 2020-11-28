@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f27cd123-2beb-4b90-a20a-bbabce7b39b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ormvercomotrabaja.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/botcitoLog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/botcitoLog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/andandobd.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adapters/orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/orm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/botcito.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/botcito.mdj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/charla.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/charla.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_layers/catalogo_charla.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layers/catalogo_charla.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_layers/controlador_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layers/controlador_bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,22 +258,22 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1606514282040" />
-    <state width="1316" height="191" key="GridCell.Tab.0.bottom" timestamp="1606520610487">
+    <state width="1316" height="140" key="GridCell.Tab.0.bottom" timestamp="1606527858623">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="191" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1606520610487" />
-    <state width="1316" height="191" key="GridCell.Tab.0.center" timestamp="1606520610487">
+    <state width="1316" height="140" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1606527858623" />
+    <state width="1316" height="140" key="GridCell.Tab.0.center" timestamp="1606527858623">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="191" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1606520610487" />
-    <state width="1316" height="191" key="GridCell.Tab.0.left" timestamp="1606520610487">
+    <state width="1316" height="140" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1606527858623" />
+    <state width="1316" height="140" key="GridCell.Tab.0.left" timestamp="1606527858623">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="191" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1606520610487" />
-    <state width="1316" height="191" key="GridCell.Tab.0.right" timestamp="1606520610487">
+    <state width="1316" height="140" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1606527858623" />
+    <state width="1316" height="140" key="GridCell.Tab.0.right" timestamp="1606527858623">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="191" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1606520610487" />
+    <state width="1316" height="140" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1606527858623" />
     <state x="260" y="98" key="IDE.errors.dialog" timestamp="1606437741153">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
