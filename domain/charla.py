@@ -7,10 +7,12 @@ class Charla:
         self.intentos_fallidos = intentos_fallidos
         self.telefono_destino = telefono_destino
         self.telefono_origen = telefono_origen
-        self.camello='sasaa' #puesta a modo de prueba para que se vea que no lo agrega a la bd, porque no esta enlazada
+        self.camello = 'sasaa' #puesta a modo de prueba para que se vea que no lo agrega a la bd, porque no esta enlazada
         self.usuario_responsable = usuario_responsable
 
-
+    def __repr__(self):
+        return "charla(" \
+               "id_charla={self.id_charla})".format(self=self)
 
 
 

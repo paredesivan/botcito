@@ -4,7 +4,7 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(50))
     addresses = relationship("Address", backref="user")
-
+    # relationship("nombre_clase_referida")
 
 class Address(Base):
     __tablename__ = 'addresses'
@@ -106,6 +106,8 @@ user = Table('user', metadata,
 address = Table('address', metadata,
                 Column('id', Integer, primary_key=True)
 )
+# no tendria que ser foranea?. supongo que no es obligatorio tener una foranea para
+# establecer una relacion
 
 mapper(User, user, properties={
     'addresses': relationship(Address, backref='user', order_by=address.c.id)

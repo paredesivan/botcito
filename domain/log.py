@@ -1,6 +1,7 @@
 class Log:
-    def __init__(self, estado, seleccionado, texto_ofrecido, fecha_hora_envio, opcion, estado_envio):
+    def __init__(self, id_charla,estado, seleccionado, texto_ofrecido, fecha_hora_envio, opcion, estado_envio):
 
+        self.id_charla=id_charla
         self.estado = estado
         self.seleccionado = seleccionado
         self.texto_ofrecido = texto_ofrecido
@@ -8,6 +9,13 @@ class Log:
         self.opcion = opcion
         self.estado_envio = estado_envio
 
+
+
+
+    def __repr__(self):
+        return "log(" \
+               "id_charlaMadre={self.id_charla}," \
+               "opcion={self.opcion}".format(self=self)
 
 
 

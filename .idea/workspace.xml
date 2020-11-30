@@ -2,16 +2,83 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f27cd123-2beb-4b90-a20a-bbabce7b39b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/andandobd.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/accion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/botcitoLog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/botcitoLog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adapters/orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/orm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botcito.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/botcito.mdj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/charla.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/charla.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/mensaje.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/mensaje.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/modo.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/modo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/parametro.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/parametro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/tag.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ormvercomotrabaja.py" beforeDir="false" afterPath="$PROJECT_DIR$/ormvercomotrabaja.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="botcitoMioAwsBrasil" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="botcitoMioAwsBrasil" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="botcitoMioAwsBrasil" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="edhyrpuf: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="botcitoMioAwsBrasil" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="edhyrpuf: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="botcitoMioAwsBrasil" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="edhyrpuf: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="botcitoMioAwsBrasil" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="edhyrpuf: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -23,6 +90,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\CONGIT\botcitoLog\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1kLQ2uOezHvmtfjcVrVECGypTcH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -32,6 +106,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -155,7 +231,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f27cd123-2beb-4b90-a20a-bbabce7b39b4" name="Default Changelist" comment="" />
@@ -170,6 +246,11 @@
       <workItem from="1606354167129" duration="6096000" />
       <workItem from="1606435816738" duration="9976000" />
       <workItem from="1606519004197" duration="552000" />
+      <workItem from="1606604924466" duration="5438000" />
+      <workItem from="1606612012267" duration="873000" />
+      <workItem from="1606612926128" duration="3916000" />
+      <workItem from="1606680990173" duration="733000" />
+      <workItem from="1606681733476" duration="11638000" />
     </task>
     <task id="LOCAL-00001" summary="jiojioji">
       <created>1605582470479</created>
@@ -206,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606445816373</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="jiojioji">
+      <created>1606527946918</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1606527946918</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,15 +305,17 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="jiojioji" />
     <option name="LAST_COMMIT_MESSAGE" value="jiojioji" />
   </component>
@@ -234,6 +324,14 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="272" y="21" key="#Notifications/0.0.1360.728@0.0.1360.728" timestamp="1606437706821" />
+    <state x="361" y="35" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606613002068">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="361" y="35" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1360.728@0.0.1360.728" timestamp="1606613002068" />
+    <state x="399" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606616015510">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="399" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1360.728@0.0.1360.728" timestamp="1606616015510" />
     <state x="410" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606439521169">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -242,10 +340,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="399" y="0" key="#main/0.0.1360.728@0.0.1360.728" timestamp="1606519373702" />
-    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1606445815277">
+    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1606527945562">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1606445815277" />
+    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1606527945562" />
     <state x="452" y="308" width="354" height="318" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1606519690584">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -258,22 +356,26 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1606514282040" />
-    <state width="1316" height="140" key="GridCell.Tab.0.bottom" timestamp="1606527858623">
+    <state width="1316" height="183" key="GridCell.Tab.0.bottom" timestamp="1606681722345">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="140" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1606527858623" />
-    <state width="1316" height="140" key="GridCell.Tab.0.center" timestamp="1606527858623">
+    <state width="1316" height="183" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1606681722345" />
+    <state width="1316" height="183" key="GridCell.Tab.0.center" timestamp="1606681722344">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="140" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1606527858623" />
-    <state width="1316" height="140" key="GridCell.Tab.0.left" timestamp="1606527858623">
+    <state width="1316" height="183" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1606681722344" />
+    <state width="1316" height="183" key="GridCell.Tab.0.left" timestamp="1606681722344">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="140" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1606527858623" />
-    <state width="1316" height="140" key="GridCell.Tab.0.right" timestamp="1606527858623">
+    <state width="1316" height="183" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1606681722344" />
+    <state width="1316" height="183" key="GridCell.Tab.0.right" timestamp="1606681722344">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="140" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1606527858623" />
+    <state width="1316" height="183" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1606681722344" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1606612210447">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1360.728@0.0.1360.728" timestamp="1606612210447" />
     <state x="260" y="98" key="IDE.errors.dialog" timestamp="1606437741153">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -282,17 +384,32 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="181" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1606520779467" />
-    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1606276407413">
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1606527949359">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1606276407413" />
-    <state x="375" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1606435828322">
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1606527949359" />
+    <state x="579" y="258" width="326" height="236" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1606681475590">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="375" y="187" key="com.intellij.ide.util.TipDialog/0.0.1360.728@0.0.1360.728" timestamp="1606435828322" />
+    <state x="579" y="258" width="326" height="236" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1360.728@0.0.1360.728" timestamp="1606681475590" />
+    <state x="410" y="168" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1606613353468">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="410" y="168" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1360.728@0.0.1360.728" timestamp="1606613353468" />
+    <state x="389" y="4" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1606614513944">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="389" y="4" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1360.728@0.0.1360.728" timestamp="1606614513944" />
+    <state x="375" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1606605416695">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="375" y="187" key="com.intellij.ide.util.TipDialog/0.0.1360.728@0.0.1360.728" timestamp="1606605416695" />
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606275381265">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1606275381265" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/botcitoLog$main.coverage" NAME="main Coverage Results" MODIFIED="1606681378144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

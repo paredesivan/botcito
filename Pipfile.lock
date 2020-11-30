@@ -1,0 +1,21 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "df06ec3af5ba80c07850c07672395b6dc56a4ca466b52890d8789bfa73ac4dcc"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "psycopg2": "*",
+            "python_version": "3.7"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {},
+    "develop": {}
+}
