@@ -29,17 +29,22 @@ session = Session()
 # session.add(a)
 # session.commit()
 
-for r in session.query(Charla):
-    print(r)
-    print(r.logs)
+log=Log(1,"43",False,"hola","123","1","nuevo")
+charla=Charla("1","3","4","5","6")
+charla.clogs.add(log)
+print(charla.clogs)
     # print("camello:",r.camello)
     # print("logs")
-print("XXXXXXXXXXXXXXXXXXXXXXXXXXX")
 
-for x in session.query(Log):
-    print(x)
-    print(x.id_charla)
-    print(x.charla)
+# for x in session.query(Log):
+#     print(x)
+#     print(x.id_charla)
+#     print(x.charla)
+
+
+
+# session.add(charla)
+# session.commit()
 
 
 

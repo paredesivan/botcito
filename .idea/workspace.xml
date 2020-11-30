@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f27cd123-2beb-4b90-a20a-bbabce7b39b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/accion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/botcitoLog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/botcitoLog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adapters/orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/orm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/botcito.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/botcito.mdj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/charla.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/charla.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/mensaje.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/mensaje.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/modo.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/modo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/parametro.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/parametro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/tag.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ormvercomotrabaja.py" beforeDir="false" afterPath="$PROJECT_DIR$/ormvercomotrabaja.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +236,8 @@
       <workItem from="1606612012267" duration="873000" />
       <workItem from="1606612926128" duration="3916000" />
       <workItem from="1606680990173" duration="733000" />
-      <workItem from="1606681733476" duration="11638000" />
+      <workItem from="1606681733476" duration="11676000" />
+      <workItem from="1606700673436" duration="2879000" />
     </task>
     <task id="LOCAL-00001" summary="jiojioji">
       <created>1605582470479</created>
@@ -294,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606527946918</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="jiojioji">
+      <created>1606695413456</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606695413456</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,10 +334,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="399" y="0" key="#main/0.0.1360.728@0.0.1360.728" timestamp="1606519373702" />
-    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1606527945562">
+    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1606695411784">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1606527945562" />
+    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1606695411784" />
     <state x="452" y="308" width="354" height="318" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1606519690584">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -384,10 +378,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="181" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1606520779467" />
-    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1606527949359">
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1606700699736">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1606527949359" />
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1606700699736" />
     <state x="579" y="258" width="326" height="236" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1606681475590">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -400,10 +394,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="389" y="4" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1360.728@0.0.1360.728" timestamp="1606614513944" />
-    <state x="375" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1606605416695">
+    <state x="375" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1606700675619">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="375" y="187" key="com.intellij.ide.util.TipDialog/0.0.1360.728@0.0.1360.728" timestamp="1606605416695" />
+    <state x="375" y="187" key="com.intellij.ide.util.TipDialog/0.0.1360.728@0.0.1360.728" timestamp="1606700675619" />
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606275381265">
       <screen x="0" y="0" width="1360" height="728" />
     </state>

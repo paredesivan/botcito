@@ -19,8 +19,9 @@ metadata = MetaData()
 # las primary key NO son indices por defecto
 # los autoincrements de las tablas no necesitan estar en la clase. es mas, no se como se pondrian
 # las clases pueden tener sus propios campos sin estar enlazados a columnas en tablas.
-#    tener cuidado que no lo recuperara al hacer la consulta a la bd
-#   lo que este en la relationship si se podra obtener. de alguna manera lo guarda en la bd
+#    tener cuidado que si no esta en la tabla, no lo recuperara al hacer la consulta a la bd
+#   lo que este en la relationship si se podra obtener. de alguna manera lo guarda en la bd.
+# habria que ver si tambien es recomensable poner la instancia en la clase
 # todo_ lo que ponga en las tablas aparecera en la tabla (sin importar si en la clase hay mas atributos)
 
 # las claves foraneas deberian ser indices para mejorar rendimiento en los joins
@@ -135,7 +136,7 @@ def start_mappers():
     #     self.direcciones=set() #set de direcciones relacion 1 a m
 
     # no es obligatorio tener una foranea para establecer una relacion
-    # es necesario que la relacion tambien sea un atributo en la clase???????????
+    # es necesario que la relacion tambien sea un atributo en la clase, no obligatorio pero si recomendable???????????
     #   porque en el libro pone la relacion dentro de la clase porque sigue el esquema orm puro
 
     mapper(Parametro, tabla_parametro, properties={
