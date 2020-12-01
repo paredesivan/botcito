@@ -1,6 +1,5 @@
 from sqlalchemy import (Table, MetaData, Column, Integer, String, SmallInteger, Boolean, Date, ForeignKey)
 from sqlalchemy.orm import mapper, relationship
-from domain.accion import Accion
 from domain.charla import Charla
 from domain.log import Log
 from domain.mensaje import Mensaje
@@ -34,18 +33,13 @@ metadata = MetaData()
 #   sirve para acceder al/a los objeto/s relacionado/s.
 #   es mas lento en teoria (no mucho), pero mejor y mas facil
 # NO SE DEBE declarar una columna en la tabla con el nombre de la relationship
-#si a la relacion le pongo backref="tablaActual" significa que TAMBIEN desde la otra tabla
+# si a la relacion le pongo backref="tablaActual" significa que TAMBIEN desde la otra tabla
 #   podre acceder a mi objeto mediante el atributo "tablaActual"
 # interpreto que siempre es recomensable usar backref, asi es mas facil si lo necesito
 
 # supongo que cuando hace el add o el commit, busca los atributos en las tablas y los compara con los que tiene actualmente
 #   la clase e inserta los que coinciden nomas, si falta alguno en la clase tira error porque insertaria un null
 
-tabla_accion = Table(
-    'accion', metadata,
-    Column('texto_accion', String(20), primary_key=True),
-    Column('funcion', String(50)),
-    Column('id_modo', ForeignKey('modo.id_modo'), index=True, nullable=False))
 
 tabla_charla = Table(
     'charla', metadata,
@@ -54,7 +48,8 @@ tabla_charla = Table(
     Column('estado', String(20), server_default='activa', index=True),
     Column('telefono_destino', String(20), index=True, nullable=False),
     Column('usuario_responsable', String(50)),
-    Column('intentos_fallidos', Integer, server_default='0')
+    Column('intentos_fallidos', Integer, server_default='0'),
+
 )
 
 tabla_log = Table(
@@ -108,10 +103,10 @@ tabla_mensaje = Table(
 
 def start_mappers():
     # mapper(nombre de la clase, nombre del objeto de tipo Table creado)
-    # mapper(Accion, tabla_accion)
+
 
     mapper(Charla, tabla_charla, properties={
-        'logs': relationship(Log,backref="charla"),
+        'logs': relationship(Log, backref="charla"),
         'servicio': relationship(Servicio, uselist=False)
     })
     # donde dice backref quiere decir que
@@ -120,16 +115,11 @@ def start_mappers():
 
     mapper(Log, tabla_log)
 
-    # mapper(Modo, tabla_modo, properties={
-    #     'mensajes': relationship(Mensaje),
-    #     'acciones': relationship(Accion)
-    # })
-
     mapper(Modo, tabla_modo)
 
     # lo que va en relationship NO CREA UN CAMPO EN LA TABLA
     # permite recuperar las instancias asociadas
-
+    # similar a
     # class parametro
     #     self.modo=modo() #relacion 1 a 1
     # class parametro
@@ -139,6 +129,8 @@ def start_mappers():
     # es necesario que la relacion tambien sea un atributo en la clase, no obligatorio pero si recomendable???????????
     #   porque en el libro pone la relacion dentro de la clase porque sigue el esquema orm puro
 
+    # lazy=False hace un left outer join
+    # por defecto es lazy True
     mapper(Parametro, tabla_parametro, properties={
         'modo_del_parametro': relationship(Modo, uselist=False)  # relacion 1 a 1, declara
         # un atributo modo_del_parametro dentro de la clase parametro que me permite acceder

@@ -9,12 +9,15 @@ class Charla:
         self.telefono_origen = telefono_origen
         self.camello = 'sasaa' #puesta a modo de prueba para que se vea que no lo agrega a la bd, porque no esta enlazada
         self.usuario_responsable = usuario_responsable
-        self.clogs=set()
+        # self.clogs=set()
 
     def __repr__(self):
-        return "charla(" \
-               "id_charla={self.id_charla})".format(self=self)
+        return "charla(id_charla={self.id_charla})".format(self=self)
 
+
+
+
+    # return "Charla(%r, %r)" % (self.id_charla, self.telefono_origen)
 
     # def crear_log(self):
     #     log=Log()

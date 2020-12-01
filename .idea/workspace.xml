@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f27cd123-2beb-4b90-a20a-bbabce7b39b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/domain/comando.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profilex.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adapters/orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/orm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botcito.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/botcito.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/accion.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/charla.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/charla.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/modo.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/modo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/modo_basico.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/modo_premium.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -237,7 +244,8 @@
       <workItem from="1606612926128" duration="3916000" />
       <workItem from="1606680990173" duration="733000" />
       <workItem from="1606681733476" duration="11676000" />
-      <workItem from="1606700673436" duration="2879000" />
+      <workItem from="1606700673436" duration="3002000" />
+      <workItem from="1606781329915" duration="8260000" />
     </task>
     <task id="LOCAL-00001" summary="jiojioji">
       <created>1605582470479</created>
@@ -288,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606695413456</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="jiojioji">
+      <created>1606705649317</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1606705649317</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,18 +341,18 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="399" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1360.728@0.0.1360.728" timestamp="1606616015510" />
-    <state x="410" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606439521169">
+    <state x="410" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606790080168">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="410" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1360.728@0.0.1360.728" timestamp="1606439521169" />
+    <state x="410" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1360.728@0.0.1360.728" timestamp="1606790080168" />
     <state x="399" y="0" key="#main" timestamp="1606519373702">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="399" y="0" key="#main/0.0.1360.728@0.0.1360.728" timestamp="1606519373702" />
-    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1606695411784">
+    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1606705648093">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1606695411784" />
+    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1606705648093" />
     <state x="452" y="308" width="354" height="318" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1606519690584">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -378,10 +393,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="181" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1606520779467" />
-    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1606700699736">
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1606705651014">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1606700699736" />
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1606705651014" />
     <state x="579" y="258" width="326" height="236" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1606681475590">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -394,10 +409,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="389" y="4" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1360.728@0.0.1360.728" timestamp="1606614513944" />
-    <state x="375" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1606700675619">
+    <state x="375" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1606782369026">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="375" y="187" key="com.intellij.ide.util.TipDialog/0.0.1360.728@0.0.1360.728" timestamp="1606700675619" />
+    <state x="375" y="187" key="com.intellij.ide.util.TipDialog/0.0.1360.728@0.0.1360.728" timestamp="1606782369026" />
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606275381265">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
