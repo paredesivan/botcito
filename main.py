@@ -1,29 +1,30 @@
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from adapters.orm import start_mappers, metadata
-from domain.parametro import Parametro
-from domain.charla import Charla
-from domain.log import Log
+from bd import inicializar_bd
+from entrypoints import flask_app
+from service_layer.controlador_bot import ControladorBot
 
 
-engine = create_engine(
-    'postgres://edhyrpuf:XqQEG43cSPNDDR01SdN_6jj2NqulhaGn@tuffi.db.elephantsql.com:5432/edhyrpuf',
-    echo=True)
+Session = inicializar_bd()
 
-# enlaza clases con tablas
-start_mappers()
+# CONTROLADOR_BOT = ControladorBot()
 
-# crea las tablas en la base de datos (no importa el start mapper!
-metadata.create_all(engine)
+# flask_app.APP.run()
 
-# enlaza la sesion con la base de datos
-Session = sessionmaker(bind=engine)
 
-# crea una sesion
-session = Session()
 
-resultado = session.query(Parametro).first()
-print(resultado)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # funciona perfecto
 # charla = Charla("inactiva", "3", "4", "5", "6")
@@ -54,24 +55,18 @@ import profilex
 # session.commit()
 
 
-# CONTROLADOR_BOT = ControladorBot()
+
 
 
 # buena forma de agregar muchos a la vez,
 # hacer una tupla
 # # create catalog
-tshirt, mug, hat, crowbar = (
-    Charla("inactiva", "3", "4", "5", "6"),
-    Charla("inactiva", "3", "4", "5", "6"),
-    Charla("inactiva", "3", "4", "5", "6"),
-    Charla("inactiva", "3", "4", "5", "6"),
-)
-
-
-# session.add(tshirt)
-# session.add(mug)
-# session.add(hat)
-# session.add(crowbar)
-session.bulk_save_objects([tshirt, mug, hat, crowbar])
-with profilex.profiled():
-    session.commit()
+# tshirt, mug, hat, crowbar = (
+#     Charla("inactiva", "3", "4", "5", "6"),
+#     Charla("inactiva", "3", "4", "5", "6"),
+#     Charla("inactiva", "3", "4", "5", "6"),
+#     Charla("inactiva", "3", "4", "5", "6"),
+# )
+# session.bulk_save_objects([tshirt, mug, hat, crowbar])
+# with profilex.profiled():
+#     session.commit()

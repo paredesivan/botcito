@@ -1,8 +1,8 @@
 from adapters.repository import AbstractRepository
-from domain.charla import Charla
+from domain.parametro import Parametro
 
 
-class SqlRepositoryCharla(AbstractRepository):
+class SqlRepositoryParametro(AbstractRepository):
 
     def __init__(self, session):
         super().__init__()
@@ -17,17 +17,15 @@ class SqlRepositoryCharla(AbstractRepository):
 
 
 
-    def get(self, id_charla):
-        return self.session.query(Charla).filter_by(id_charla=id_charla).first()
-
-
-
-
-    def buscar_charla_existente(self, telefono):
-        resultado=self.session.query(Charla).filter_by(telefono_origen=telefono, estado='activa')
+    def get(self,id_sucursal):
+        resultado = self.session.query(Parametro)
         if resultado is None:
             return 0
         return resultado.first()
+
+
+
+
 
 # class SqlAlchemyRepository(AbstractRepository):
 #

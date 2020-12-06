@@ -6,8 +6,8 @@ from adapters.orm import metadata, start_mappers
 
 @pytest.fixture
 def in_memory_db():
-    engine = create_engine('postgres://mzmqoonm:xhZeUWN5TPvYKQYAQdCelh2SSx2Wpjas@suleiman.db.elephantsql.com:5432/mzmqoonm')
-    # engine = create_engine('sqlite:///:memory:')
+    # engine = create_engine('postgres://edhyrpuf:XqQEG43cSPNDDR01SdN_6jj2NqulhaGn@tuffi.db.elephantsql.com:5432/edhyrpuf')
+    engine = create_engine('postgres:///:memory:')
     metadata.create_all(engine)
     return engine
 

@@ -2,10 +2,10 @@ from sqlalchemy import (Table, MetaData, Column, Integer, String, SmallInteger, 
 from sqlalchemy.orm import mapper, relationship
 from domain.charla import Charla
 from domain.log import Log
-from domain.mensaje import Mensaje
 from domain.modo import Modo
+from domain.nodo import Nodo
 from domain.parametro import Parametro
-from domain.servicio import Servicio
+from domain.tag import Tag
 
 
 metadata = MetaData()
@@ -46,9 +46,11 @@ tabla_charla = Table(
     Column('id_charla', Integer, primary_key=True, index=True, autoincrement=True),
     Column('telefono_origen', String(50), nullable=False),
     Column('estado', String(20), server_default='activa', index=True),
+    Column('datos', String(200), index=True),
     Column('telefono_destino', String(20), index=True, nullable=False),
-    Column('usuario_responsable', String(50)),
+    Column('usuario_responsable', String(50),server_default='automatico'),
     Column('intentos_fallidos', Integer, server_default='0'),
+    Column('id_modo',ForeignKey('modo.id_modo'))
 
 )
 
@@ -56,6 +58,7 @@ tabla_log = Table(
     'log', metadata,
     Column('id_log', Integer, primary_key=True, index=True, autoincrement=True),
     Column('estado', String(20), index=True, server_default='activa'),
+    Column('datos', String(200), index=True),
     Column('seleccionado', Boolean, server_default='False'),
     Column('texto_ofrecido', String(200)),
     Column('fecha_hora_envio', String(50)),
@@ -68,54 +71,60 @@ tabla_modo = Table(
     'modo', metadata,
     Column('id_modo', SmallInteger, primary_key=True, index=True),
     Column('nombre', String(50), unique=True),
+)
 
+tabla_nodo = Table(
+    'nodo', metadata,
+    Column('id', Integer, primary_key=True, autoincrement=True),
+    Column('id_nodo', Integer, index=True),
+    Column('id_padre', ForeignKey('nodo.id'), index=True, nullable=True),
+    Column('id_modo', ForeignKey('modo.id_modo'), index=True, nullable=False),
+    Column('orden', SmallInteger),
+)
+
+tabla_nodo_tag = Table(
+    'nodo_tag', metadata,
+    Column('id_nodo', ForeignKey('nodo.id'), primary_key=True, index=True),
+    Column('id_tag', ForeignKey('tag.id_tag'), primary_key=True, index=True),
 )
 
 tabla_parametro = Table(
     'parametro', metadata,
-    Column('id_empresa', String(10), primary_key=True),
-    Column('horarios', String(20), server_default='6,13,20'),
+    Column('id_sucursal', String(10), primary_key=True),
     Column('maximo_intentos_fallidos', Integer, server_default='3'),
     Column('automatico_encendido', Boolean, server_default='False'),
     Column('id_modo', ForeignKey('modo.id_modo'), index=True, nullable=False),
 )
 
-tabla_servicio = Table(
-    'servicio', metadata,
-    Column('id_servicio', Integer, primary_key=True, index=True),
-    Column('id_movil', Integer),
-    Column('chofer', String(50)),
-    Column('patente', String(20)),
-    Column('estado', String(20)),
-    Column('datos', String(300)),
-    Column('id_charla', ForeignKey('charla.id_charla'), index=True)
-)
-
 # # [_saludo,    buenos #hora bienvenido a #empresa,    saludo
-tabla_mensaje = Table(
-    'mensaje', metadata,
-    Column('id_mensaje', String(20), primary_key=True, index=True),
+tabla_tag = Table(
+    'tag', metadata,
+    Column('id_tag', String(20), primary_key=True, index=True),
     Column('texto', String(200), nullable=False),
-    Column('texto_para_usuario', String(30)),
-    Column('id_modo', ForeignKey('modo.id_modo'), index=True)
+    Column('texto_para_usuario', String(30), nullable=True),
+
 )
 
 
 def start_mappers():
     # mapper(nombre de la clase, nombre del objeto de tipo Table creado)
 
-
     mapper(Charla, tabla_charla, properties={
-        'logs': relationship(Log, backref="charla"),
-        'servicio': relationship(Servicio, uselist=False)
+        'logs': relationship(Log, backref="charla")
     })
     # donde dice backref quiere decir que
     # si hago charla.logs mostrara todas las instancias de logs que corresponden a la charla
     # y si en log hago log.charla mostrara el objeto entero de tipo charla que referencia a ese log
 
     mapper(Log, tabla_log)
+    mapper(Modo, tabla_modo, properties={
+        'nodos': relationship(Nodo, backref='modo')
+    })
 
-    mapper(Modo, tabla_modo)
+    mapper(Nodo, tabla_nodo, properties={
+        'hijos': relationship(Nodo),
+        'tags': relationship(Tag, secondary=tabla_nodo_tag)
+    })
 
     # lo que va en relationship NO CREA UN CAMPO EN LA TABLA
     # permite recuperar las instancias asociadas
@@ -137,9 +146,7 @@ def start_mappers():
         # al objeto referenciado
     })
 
-    mapper(Servicio, tabla_servicio)
-
-    # mapper(Mensaje, tabla_mensaje)
+    mapper(Tag, tabla_tag)
 
 
 def add_column(engine, table_name, column):

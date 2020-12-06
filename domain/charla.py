@@ -2,26 +2,31 @@ from domain.excepciones import IntentosFallidosException, CharlaInactiva
 
 
 class Charla:
-    def __init__(self,  estado, intentos_fallidos, telefono_destino, telefono_origen, usuario_responsable):
+    def __init__(self,  id_modo,telefono_destino, telefono_origen,estado='activa', intentos_fallidos=0, usuario_responsable='automatico',
+                 datos=None):
+        self.id_modo = id_modo
         self.estado = estado
         self.intentos_fallidos = intentos_fallidos
         self.telefono_destino = telefono_destino
         self.telefono_origen = telefono_origen
-        self.camello = 'sasaa' #puesta a modo de prueba para que se vea que no lo agrega a la bd, porque no esta enlazada
+        self.camello = 'sasaa'  # puesta a modo de prueba para que se vea que no lo agrega a la bd, porque no esta enlazada
         self.usuario_responsable = usuario_responsable
-        # self.clogs=set()
+        self.datos = datos
+
+
+
 
     def __repr__(self):
-        return "charla(id_charla={self.id_charla})".format(self=self)
+        return str(self.__dict__)
+
+    def __str__(self):
+        return str(self.__dict__)
 
 
 
-
-    # return "Charla(%r, %r)" % (self.id_charla, self.telefono_origen)
 
     # def crear_log(self):
     #     log=Log()
-
 
     def esta_charla_activa(self):
         if self.estado != 'activa':

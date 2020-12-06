@@ -1,8 +1,8 @@
 class Modo():
-    def __init__(self, id_modo, nombre, primer_comando):
+    def __init__(self, id_modo, nombre):
         self.id_modo = id_modo
         self.nombre = nombre
-        self.primer_comando = primer_comando
+
 
 
 

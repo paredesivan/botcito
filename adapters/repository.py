@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from domain.charla import Charla
 
 
 class AbstractRepository(ABC):
@@ -11,5 +10,5 @@ class AbstractRepository(ABC):
 
 
     @abstractmethod
-    def get(self, reference) -> Charla:
+    def get(self, reference):
         raise NotImplementedError
