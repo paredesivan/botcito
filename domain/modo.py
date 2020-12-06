@@ -1,8 +1,12 @@
+from domain.nodo import Nodo
+from typing import  Set
+
+
 class Modo():
     def __init__(self, id_modo, nombre):
         self.id_modo = id_modo
         self.nombre = nombre
-
+        self.nodos = set()  # type: Set[Nodo]
 
 
 

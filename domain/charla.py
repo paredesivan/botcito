@@ -1,4 +1,7 @@
+from typing import Set
+
 from domain.excepciones import IntentosFallidosException, CharlaInactiva
+from domain.log import Log
 
 
 class Charla:
@@ -12,6 +15,7 @@ class Charla:
         self.camello = 'sasaa'  # puesta a modo de prueba para que se vea que no lo agrega a la bd, porque no esta enlazada
         self.usuario_responsable = usuario_responsable
         self.datos = datos
+        self.logs=set() # type: Set[Log]
 
 
 

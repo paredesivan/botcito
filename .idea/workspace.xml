@@ -2,42 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f27cd123-2beb-4b90-a20a-bbabce7b39b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/adapters/sql_repository_nodo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adapters/sql_repository_parametro.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adapters/sql_repository_tag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/atmsj_adapter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/callprocesor_adapter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/nodo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/saludo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/seleccionar_direccion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/tag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hilos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_layer/catalogo_parametro.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_layer/ji.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/integration/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utiles.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adapters/ormexplicacion.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/ingresar_direccion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adapters/orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/orm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adapters/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adapters/sql_repository_charla.py" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/sql_repository_charla.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/botcito.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/botcito.mdj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/charla.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/charla.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/comando.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/excepciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/excepciones.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/mensaje.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/modo.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/modo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/nodo.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/nodo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/parametro.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/parametro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/servicio.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrypoints/flask_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrypoints/flask_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_layers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/bd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_layers/catalogo_charla.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layer/catalogo_charla.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_layers/controlador_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layer/controlador_bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/test_movil.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/integration/test_movil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/saludo.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/saludo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/seleccionar_direccion.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/seleccionar_direccion.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,8 +76,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTTP Request" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -131,7 +106,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/service_layer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/domain" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -141,18 +116,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\CONGIT\botcitoLog\service_layer" />
-      <recent name="D:\CONGIT\botcitoLog\adapters" />
-      <recent name="D:\CONGIT\botcitoLog" />
-      <recent name="D:\CONGIT\botcitoLog\service_layers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\CONGIT\botcitoLog\tests\integration" />
       <recent name="D:\CONGIT\botcitoLog" />
       <recent name="D:\CONGIT\botcitoLog\service_layers" />
       <recent name="D:\CONGIT\botcitoLog\entrypoints" />
       <recent name="D:\CONGIT\botcitoLog\adapters" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CONGIT\botcitoLog\domain" />
+      <recent name="D:\CONGIT\botcitoLog\service_layer" />
+      <recent name="D:\CONGIT\botcitoLog\adapters" />
+      <recent name="D:\CONGIT\botcitoLog" />
+      <recent name="D:\CONGIT\botcitoLog\service_layers" />
     </key>
   </component>
   <component name="RunManager" selected="Python.flask_app">
@@ -299,7 +275,8 @@
       <workItem from="1606700673436" duration="3002000" />
       <workItem from="1606781329915" duration="8280000" />
       <workItem from="1607185921758" duration="8666000" />
-      <workItem from="1607205476178" duration="17656000" />
+      <workItem from="1607205476178" duration="17703000" />
+      <workItem from="1607260500121" duration="6777000" />
     </task>
     <task id="LOCAL-00001" summary="jiojioji">
       <created>1605582470479</created>
@@ -364,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606793880838</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="jiojioji">
+      <created>1607227841634</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607227841634</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,10 +394,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="399" y="0" key="#main/0.0.1360.728@0.0.1360.728" timestamp="1606519373702" />
-    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1606793878720">
+    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1607227840207">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1606793878720" />
+    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1607227840207" />
     <state x="452" y="308" width="354" height="318" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1606519690584">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -426,22 +410,22 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1606514282040" />
-    <state width="1316" height="216" key="GridCell.Tab.0.bottom" timestamp="1607227472894">
+    <state width="1316" height="216" key="GridCell.Tab.0.bottom" timestamp="1607227860940">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="216" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607227472894" />
-    <state width="1316" height="216" key="GridCell.Tab.0.center" timestamp="1607227472893">
+    <state width="1316" height="216" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607227860940" />
+    <state width="1316" height="216" key="GridCell.Tab.0.center" timestamp="1607227860939">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="216" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1607227472893" />
-    <state width="1316" height="216" key="GridCell.Tab.0.left" timestamp="1607227472893">
+    <state width="1316" height="216" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1607227860939" />
+    <state width="1316" height="216" key="GridCell.Tab.0.left" timestamp="1607227860939">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="216" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1607227472893" />
-    <state width="1316" height="216" key="GridCell.Tab.0.right" timestamp="1607227472893">
+    <state width="1316" height="216" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1607227860939" />
+    <state width="1316" height="216" key="GridCell.Tab.0.right" timestamp="1607227860939">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="216" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1607227472893" />
+    <state width="1316" height="216" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1607227860939" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1606612210447">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -454,10 +438,14 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="181" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1606520779467" />
-    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1606793882790">
+    <state width="506" height="446" key="SwitcherDM" timestamp="1607261240143">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1606793882790" />
+    <state width="506" height="446" key="SwitcherDM/0.0.1360.728@0.0.1360.728" timestamp="1607261240143" />
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1607227844255">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1607227844255" />
     <state x="579" y="258" width="326" height="236" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1607226967094">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -470,10 +458,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="389" y="4" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1360.728@0.0.1360.728" timestamp="1607213847607" />
-    <state x="375" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1607187525605">
+    <state x="375" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1607260629862">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="375" y="187" key="com.intellij.ide.util.TipDialog/0.0.1360.728@0.0.1360.728" timestamp="1607187525605" />
+    <state x="375" y="187" key="com.intellij.ide.util.TipDialog/0.0.1360.728@0.0.1360.728" timestamp="1607260629862" />
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606275381265">
       <screen x="0" y="0" width="1360" height="728" />
     </state>

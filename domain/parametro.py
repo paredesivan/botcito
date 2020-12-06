@@ -1,11 +1,14 @@
-
 class Parametro:
-    # def __init__(self, id_sucursal=None, modo=None,  maximo_intentos_fallidos=3,
-    #              automatico_encendido=False):
-    #     self.id_sucursal = id_sucursal
-    #     self.automatico_encendido = automatico_encendido
-    #     self.maximo_intentos_fallidos = maximo_intentos_fallidos
-    #     self.id_modo = modo
+
+    # le pongo argumentos con valores por defecto porque no voy a crearlo, lo usare para recuperar cosas nomas
+    # no necesito crear la clase si me pongo a pensar
+    def __init__(self, id_modo=None, id_sucursal=None, maximo_intentos_fallidos=3,
+                 automatico_encendido=False, modo=None):
+        self.id_sucursal = id_sucursal
+        self.automatico_encendido = automatico_encendido
+        self.maximo_intentos_fallidos = maximo_intentos_fallidos
+        self.id_modo = id_modo
+        self.modo = modo
 
 
 
@@ -19,6 +22,7 @@ class Parametro:
 
 
 
+
     # llamar a sqlalchemy y setear valores
     # try:
     #     parametros=SqlRepositoryParametro.get(self.id_empresa)
@@ -27,4 +31,3 @@ class Parametro:
 
     def obtener_maximo_intentos_fallidos(self):
         return self.maximo_intentos_fallidos
-
