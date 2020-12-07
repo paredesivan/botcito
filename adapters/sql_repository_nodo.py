@@ -1,6 +1,9 @@
 from adapters.repository import AbstractRepository
-from domain.nodo import Nodo
+from domain.nodos.nodo import Nodo
+from single import singleton
 
+
+@singleton
 class SqlRepositoryNodo(AbstractRepository):
 
     def __init__(self, session):
@@ -10,8 +13,16 @@ class SqlRepositoryNodo(AbstractRepository):
 
 
 
-    def add(self, charla):
-        self.session.add(charla)
+    def obtener_nodo_inicial(self, id_modo):
+        salida = self.session.query(Nodo).filter_by(id_padre=None, id_modo=id_modo)
+        salida = salida.first()
+        return salida
+
+
+
+
+    def add(self, nodo):
+        self.session.add(nodo)
 
 
 

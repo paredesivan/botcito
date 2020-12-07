@@ -1,12 +1,21 @@
 from typing import Set
-
 from domain.excepciones import IntentosFallidosException, CharlaInactiva
 from domain.log import Log
 
 
 class Charla:
-    def __init__(self,  id_modo,telefono_destino, telefono_origen,estado='activa', intentos_fallidos=0, usuario_responsable='automatico',
+    def __init__(self,
+                 ultimo_nodo,
+                 id_modo,
+                 telefono_destino,
+                 telefono_origen,
+                 estado='activa',
+                 intentos_fallidos=0,
+                 usuario_responsable='automatico',
                  datos=None):
+
+        print(ultimo_nodo)
+        self.id_ultimo_nodo = ultimo_nodo.id
         self.id_modo = id_modo
         self.estado = estado
         self.intentos_fallidos = intentos_fallidos
@@ -15,13 +24,23 @@ class Charla:
         self.camello = 'sasaa'  # puesta a modo de prueba para que se vea que no lo agrega a la bd, porque no esta enlazada
         self.usuario_responsable = usuario_responsable
         self.datos = datos
-        self.logs=set() # type: Set[Log]
+        self.logs = list()
+        self.ultimo_nodo = ultimo_nodo
+
+
+
+
+    def obtener_arbol(self):
+        return self.modo.nodos
 
 
 
 
     def __repr__(self):
         return str(self.__dict__)
+
+
+
 
     def __str__(self):
         return str(self.__dict__)

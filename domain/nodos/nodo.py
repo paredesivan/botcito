@@ -1,14 +1,14 @@
 from typing import Set
 from domain.tag import Tag
-
+from adapters.sql_repository_tag import SqlRepositoryTag
 
 class Nodo:
     def __init__(self, orden, id_nodo, id_padre):
+
         self.orden = orden
-        self.hijos = set()  # type: Set[Nodo]
         self.id_nodo = id_nodo
         self.id_padre = id_padre
-        self.tags = set()  # type: Set[Tag]
+
 
 
 
@@ -22,17 +22,13 @@ class Nodo:
 
 
 
-    def obtener_menu_dinamico(self, charla):
-        pass
+
+
+    def __str__(self):
+        return str(self.__dict__)
 
 
 
 
     def obtener_titulo(self):
         pass
-
-
-
-
-    def __str__(self):
-        return str(self.__dict__)

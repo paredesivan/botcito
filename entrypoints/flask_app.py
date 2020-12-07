@@ -20,12 +20,17 @@ CORS(APP)
 # parametro=sesion.query(Parametro).first()
 # print(parametro.obtener_maximo_intentos_fallidos())
 # print(parametro.modo_del_parametro)
+
+# from domain.nodo import Nodo
+# print(sesion.query(Nodo).all())
+
 @APP.route('/nuevo_mensaje', methods=['POST'])
 def nuevo_mensaje():
     # limpiar
     # procesar
     # devolver
     # al request-data se lo tengo que pasar limpio
+
 
     datos = request.json
 

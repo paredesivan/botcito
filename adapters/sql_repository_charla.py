@@ -1,7 +1,8 @@
 from adapters.repository import AbstractRepository
 from domain.charla import Charla
 
-
+from single import singleton
+@singleton
 class SqlRepositoryCharla(AbstractRepository):
 
     def __init__(self, session):

@@ -1,9 +1,9 @@
 from adapters.repository import AbstractRepository
-from domain.parametro import Parametro
-
+from domain.modo import Modo
 from single import singleton
+
 @singleton
-class SqlRepositoryParametro(AbstractRepository):
+class SqlRepositoryModo(AbstractRepository):
 
     def __init__(self, session):
         super().__init__()
@@ -12,17 +12,16 @@ class SqlRepositoryParametro(AbstractRepository):
 
 
 
-    def add(self, charla):
-        self.session.add(charla)
+    # no voy a dejar que se agreguen modos
+    def add(self, modo):
+        self.session.add(modo)
 
 
 
 
-    def get(self,id_sucursal):
-        resultado = self.session.query(Parametro)
-        if resultado is None:
-            return 0
-        return resultado.first()
+    def get(self, id_modo):
+        return self.session.query(Modo).filter_by(id_modo=id_modo).first()
+
 
 
 

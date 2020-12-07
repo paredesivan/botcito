@@ -1,0 +1,11 @@
+POST http://localhost:5000/nuevo_mensaje
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "telefono_origen": "3413403674",
+  "telefono_destino": "4131313"
+}
+
+###

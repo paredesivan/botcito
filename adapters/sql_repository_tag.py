@@ -1,7 +1,8 @@
 from adapters.repository import AbstractRepository
 from domain.tag import Tag
-from adapters.orm import tabla_tag
+from single import singleton
 
+@singleton
 class SqlRepositoryTag(AbstractRepository):
 
     def __init__(self, session):

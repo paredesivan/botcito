@@ -2,17 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f27cd123-2beb-4b90-a20a-bbabce7b39b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/adapters/ormexplicacion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/ingresar_direccion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adapters/sql_repository_modo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/nodos/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/nodos/direccion_mapa.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/palabras_reservadas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrypoints/pruebarest.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adapters/orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/orm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapters/ormexplicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/ormexplicacion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapters/sql_repository_charla.py" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/sql_repository_charla.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapters/sql_repository_nodo.py" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/sql_repository_nodo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapters/sql_repository_parametro.py" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/sql_repository_parametro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapters/sql_repository_tag.py" beforeDir="false" afterPath="$PROJECT_DIR$/adapters/sql_repository_tag.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/botcito.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/botcito.mdj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/charla.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/charla.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/ingresar_direccion.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/nodos/ingresar_direccion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/modo.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/modo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/nodo.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/nodo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/parametro.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/parametro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/saludo.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/saludo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/seleccionar_direccion.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/seleccionar_direccion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/nodo.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/nodos/nodo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/saludo.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/nodos/saludo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/seleccionar_direccion.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/nodos/seleccionar_direccion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/tag.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/tag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrypoints/falcon_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrypoints/falcon_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrypoints/flask_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrypoints/flask_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_layer/controlador_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layer/controlador_bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,21 +130,126 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CONGIT\botcitoLog\domain\nodos" />
+      <recent name="D:\CONGIT\botcitoLog\domain" />
       <recent name="D:\CONGIT\botcitoLog\tests\integration" />
       <recent name="D:\CONGIT\botcitoLog" />
       <recent name="D:\CONGIT\botcitoLog\service_layers" />
-      <recent name="D:\CONGIT\botcitoLog\entrypoints" />
-      <recent name="D:\CONGIT\botcitoLog\adapters" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CONGIT\botcitoLog\domain" />
-      <recent name="D:\CONGIT\botcitoLog\service_layer" />
       <recent name="D:\CONGIT\botcitoLog\adapters" />
+      <recent name="D:\CONGIT\botcitoLog\service_layer" />
       <recent name="D:\CONGIT\botcitoLog" />
       <recent name="D:\CONGIT\botcitoLog\service_layers" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.flask_app">
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/nuevo_mensaje" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;telefono_origen&quot;: &quot;3413403674&quot;,&#10;  &quot;telefono_destino&quot;: &quot;4131313&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/nuevo_mensaje" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="telefono_origen" />
+                <option name="value" value="3413403674" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="telefono_destino" />
+                <option name="value" value="4131313" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="hu" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/nuevo_mensaje" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="telefono_origen" />
+                <option name="value" value="3413403674" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="telefono_destino" />
+                <option name="value" value="4131313" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.pruebarest#1">
+    <configuration name="pruebarest#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/entrypoints/pruebarest.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api_8#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_8.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="environ" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="botcitoLog" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -198,57 +316,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="serverFlask" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="botcitoLog" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\CONGIT\botcitoLog\entrypoints\flask_app.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_movil" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="botcitoLog" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\CONGIT\botcitoLog\tests\integration\test_movil.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.pruebarest#1" />
         <item itemvalue="Python.flask_app" />
+        <item itemvalue="HTTP Request.rest-api_8#1" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.environ" />
-        <item itemvalue="Python.test_movil" />
-        <item itemvalue="Python.serverFlask" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +350,9 @@
       <workItem from="1606781329915" duration="8280000" />
       <workItem from="1607185921758" duration="8666000" />
       <workItem from="1607205476178" duration="17703000" />
-      <workItem from="1607260500121" duration="6777000" />
+      <workItem from="1607260500121" duration="6797000" />
+      <workItem from="1607281234369" duration="10597000" />
+      <workItem from="1607291870235" duration="10634000" />
     </task>
     <task id="LOCAL-00001" summary="jiojioji">
       <created>1605582470479</created>
@@ -348,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607227841634</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="jiojioji">
+      <created>1607267678436</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1607267678436</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,10 +477,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="399" y="0" key="#main/0.0.1360.728@0.0.1360.728" timestamp="1606519373702" />
-    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1607227840207">
+    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1607267676911">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1607227840207" />
+    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1607267676911" />
     <state x="452" y="308" width="354" height="318" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1606519690584">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -406,26 +489,46 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="210" y="18" key="DBNavigator.ProjectSettingsDialog/0.0.1360.728@0.0.1360.728" timestamp="1606359841704" />
+    <state x="360" y="168" key="DUMP_DIALOG_DIMENSION_KEY" timestamp="1607297627162">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="360" y="168" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1360.728@0.0.1360.728" timestamp="1607297627162" />
     <state x="460" y="118" key="FileChooserDialogImpl" timestamp="1606514282040">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1606514282040" />
-    <state width="1316" height="216" key="GridCell.Tab.0.bottom" timestamp="1607227860940">
+    <state width="1316" height="216" key="GridCell.Tab.0.bottom" timestamp="1607302793903">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="216" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607227860940" />
-    <state width="1316" height="216" key="GridCell.Tab.0.center" timestamp="1607227860939">
+    <state width="1316" height="216" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607302793903" />
+    <state width="1316" height="216" key="GridCell.Tab.0.center" timestamp="1607302793903">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="216" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1607227860939" />
-    <state width="1316" height="216" key="GridCell.Tab.0.left" timestamp="1607227860939">
+    <state width="1316" height="216" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1607302793903" />
+    <state width="1316" height="216" key="GridCell.Tab.0.left" timestamp="1607302793903">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="216" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1607227860939" />
-    <state width="1316" height="216" key="GridCell.Tab.0.right" timestamp="1607227860939">
+    <state width="1316" height="216" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1607302793903" />
+    <state width="1316" height="216" key="GridCell.Tab.0.right" timestamp="1607302793903">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="216" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1607227860939" />
+    <state width="1316" height="216" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1607302793903" />
+    <state width="1316" height="214" key="GridCell.Tab.1.bottom" timestamp="1607302793891">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1316" height="214" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607302793891" />
+    <state width="1316" height="214" key="GridCell.Tab.1.center" timestamp="1607302793891">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1316" height="214" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1607302793891" />
+    <state width="1316" height="214" key="GridCell.Tab.1.left" timestamp="1607302793891">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1316" height="214" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1607302793891" />
+    <state width="1316" height="214" key="GridCell.Tab.1.right" timestamp="1607302793891">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1316" height="214" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1607302793891" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1606612210447">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -434,6 +537,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="260" y="98" key="IDE.errors.dialog/0.0.1360.728@0.0.1360.728" timestamp="1606437741153" />
+    <state x="460" y="168" key="RestClientTextRequest" timestamp="1607286880509">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="460" y="168" key="RestClientTextRequest/0.0.1360.728@0.0.1360.728" timestamp="1607286880509" />
     <state x="181" y="0" key="SettingsEditor" timestamp="1606520779467">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -442,33 +549,78 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state width="506" height="446" key="SwitcherDM/0.0.1360.728@0.0.1360.728" timestamp="1607261240143" />
-    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1607227844255">
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1607267682358">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1607227844255" />
-    <state x="579" y="258" width="326" height="236" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1607226967094">
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1607267682358" />
+    <state x="579" y="258" width="326" height="236" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1607291157472">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="579" y="258" width="326" height="236" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1360.728@0.0.1360.728" timestamp="1607226967094" />
+    <state x="579" y="258" width="326" height="236" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1360.728@0.0.1360.728" timestamp="1607291157472" />
     <state x="410" y="168" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1606613353468">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="410" y="168" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1360.728@0.0.1360.728" timestamp="1606613353468" />
-    <state x="389" y="4" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1607213847607">
+    <state x="143" y="9" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1607300924523">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="389" y="4" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1360.728@0.0.1360.728" timestamp="1607213847607" />
-    <state x="375" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1607260629862">
+    <state x="143" y="9" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1360.728@0.0.1360.728" timestamp="1607300924523" />
+    <state x="375" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1607291977550">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="375" y="187" key="com.intellij.ide.util.TipDialog/0.0.1360.728@0.0.1360.728" timestamp="1607260629862" />
+    <state x="375" y="187" key="com.intellij.ide.util.TipDialog/0.0.1360.728@0.0.1360.728" timestamp="1607291977550" />
+    <state x="377" y="96" width="606" height="536" key="find.popup" timestamp="1607291804055">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="377" y="96" width="606" height="536" key="find.popup/0.0.1360.728@0.0.1360.728" timestamp="1607291804055" />
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606275381265">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1606275381265" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/service_layer/controlador_bot.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/domain/nodos/nodo.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/domain/nodos/nodo.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/domain/nodos/nodo.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/domain/nodos/saludo.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/domain/nodos/saludo.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/domain/nodos/nodo.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/botcitoLog$main.coverage" NAME="main Coverage Results" MODIFIED="1606681378144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/botcitoLog$flask_app.coverage" NAME="flask_app Coverage Results" MODIFIED="1607227431945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/entrypoints" />
+    <SUITE FILE_PATH="coverage/botcitoLog$flask_app.coverage" NAME="flask_app Coverage Results" MODIFIED="1607302787401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/entrypoints" />
   </component>
 </project>

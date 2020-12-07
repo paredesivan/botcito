@@ -3,14 +3,21 @@ from service_layer.catalogo_parametro import CatalogoParametros
 from single import singleton
 from domain.charla import Charla
 from domain.excepciones import ElementoVacio
+from adapters.sql_repository_nodo import SqlRepositoryNodo
+
+
+def es_mensaje_invalido(mensaje):
+    return mensaje is None
 
 
 @singleton
 class ControladorBot:
     def __init__(self, sesion):
-        self.parametro_actual = self.CATALOGO_PARAMETROS.buscar()
+
         self.CATALOGO_CHARLA = CatalogoCharlas(sesion)
         self.CATALOGO_PARAMETROS = CatalogoParametros(sesion)
+        self.SQL_REPOSITORY_NODO = SqlRepositoryNodo(sesion)
+        self.parametro_actual = None
         self.charla_actual = None
         self.sesion = sesion
 
@@ -25,40 +32,26 @@ class ControladorBot:
 
     def nuevo_mensaje(self, mensaje):
 
-        if mensaje is None:
+        if es_mensaje_invalido(mensaje):
             raise ElementoVacio("no hay mensaje")
-
-        self.charla_actual = self.CATALOGO_CHARLA.buscar_charla_existente(mensaje.get('telefono_origen'))
-
-        if not self.existe_charla():
-
-            self.parametro_actual = self.CATALOGO_PARAMETROS.buscar()
-            if self.parametro_actual == 0:
-                raise ElementoVacio("no existe el parametro")
-
-            # crea una charla
-            self.charla_actual = Charla(telefono_destino=mensaje.get('telefono_destino'),
-                                        telefono_origen=mensaje.get('telefono_origen'),
-                                        id_modo=self.parametro_actual.id_modo)
-
-        # self.sesion.add(self.charla_actual)
-        # self.sesion.commit()
-
-        print(self.charla_actual)
-        return {'Dato': str(self.charla_actual)}
-
-        # "hola quiero un movil"
 
         # mensaje es una palabra reservada de airtrack
         #       ejecutar accion
         #       salir
 
-        # comentario no es una palabra reservada de airtrack
+        self.charla_actual = self.CATALOGO_CHARLA.buscar_charla_existente(mensaje.get('telefono_origen'))
 
-        # self.charla_actual = self.CATALOGO_CHARLA.buscar(mensaje)
-        # no hay charla
-        # crearla
-        # modo=buscar el modo de parametros
+        if not self.existe_charla():
+            self.crear_charla(mensaje)
+
+        ultimo_nodo = self.charla_actual.ultimo_nodo
+        menu = ultimo_nodo.armar_menu(self.charla_actual)
+
+        # self.charla_actual.guardar_logs(menu)
+
+        print(self.charla_actual)
+        return {'Dato': str(self.charla_actual)}
+
         # segun el modo, llamar a su funcion ver que opciones se guardaran en logs y las acciones
         # guardar en logs que se saludo!
         # armar algo en servicio???
@@ -86,6 +79,29 @@ class ControladorBot:
         # marcar como inactivos las actuales
         # obtener accion a realizar (no buscar en la bd porque si la cambio a la bd en tiempo real se rompera)
         # segun el modo determinar a que funcion llamar
+
+
+
+
+    def crear_charla(self, mensaje):
+        self.parametro_actual = self.CATALOGO_PARAMETROS.buscar()
+        if self.parametro_actual == 0:
+            raise ElementoVacio("no existe el parametro")
+
+        id_modo_actual = self.parametro_actual.id_modo
+
+        nodo_inicial = self.SQL_REPOSITORY_NODO.obtener_nodo_inicial(id_modo_actual)
+
+        # crea una charla
+        try:
+            self.charla_actual = Charla(telefono_destino=mensaje.get('telefono_destino'),
+                                        telefono_origen=mensaje.get('telefono_origen'),
+                                        id_modo=self.parametro_actual.id_modo,
+                                        ultimo_nodo=nodo_inicial)
+        except Exception as e:
+            print(e)
+        else:
+            self.sesion.add(self.charla_actual)
 
 
 
