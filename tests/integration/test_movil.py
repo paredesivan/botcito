@@ -15,3 +15,4 @@ def test_crear_movil_orm_schema(session):
     session.add(movil)
     session.commit()
     assert session.query(Movil).all() == [movil]
+

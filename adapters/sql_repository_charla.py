@@ -1,7 +1,10 @@
-from adapters.repository import AbstractRepository
+from datetime import datetime, timedelta
+from adapters.sql_repository import AbstractRepository
 from domain.charla import Charla
 
 from single import singleton
+
+
 @singleton
 class SqlRepositoryCharla(AbstractRepository):
 
@@ -24,8 +27,24 @@ class SqlRepositoryCharla(AbstractRepository):
 
 
 
+    def finalizar_charlas_viejas(self):
+        fecha_desde = datetime.now() - timedelta(hours=24)
+        return self.sesion.query(Charla).filter(Charla.estado == 'activa', Charla.fecha > fecha_desde).update(
+            {"estado": "finalizada"})
+
+
+
+    def finalizar_charla(self,id_charla):
+        return self.sesion.query(Charla).filter_by(id_charla).update(
+            {"estado": "finalizada"})
+
+
+
+
     def buscar_charla_existente(self, telefono):
-        resultado=self.session.query(Charla).filter_by(telefono_origen=telefono, estado='activa')
+        resultado = self.session.query(Charla) \
+            .filter_by(telefono_origen=telefono,
+                       estado='activa')
         if resultado is None:
             return 0
         return resultado.first()

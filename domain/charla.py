@@ -1,6 +1,7 @@
 from typing import Set
 from domain.excepciones import IntentosFallidosException, CharlaInactiva
 from domain.log import Log
+from adapters.sql_repository_log import SqlRepositoryLog
 
 
 class Charla:
@@ -13,9 +14,8 @@ class Charla:
                  intentos_fallidos=0,
                  usuario_responsable='automatico',
                  datos=None):
+        # print(ultimo_nodo)
 
-        print(ultimo_nodo)
-        self.id_ultimo_nodo = ultimo_nodo.id
         self.id_modo = id_modo
         self.estado = estado
         self.intentos_fallidos = intentos_fallidos
@@ -26,24 +26,12 @@ class Charla:
         self.datos = datos
         self.logs = list()
         self.ultimo_nodo = ultimo_nodo
-
+        self.id_ultimo_nodo = ultimo_nodo.id
 
 
 
     def obtener_arbol(self):
         return self.modo.nodos
-
-
-
-
-    def __repr__(self):
-        return str(self.__dict__)
-
-
-
-
-    def __str__(self):
-        return str(self.__dict__)
 
 
 
@@ -78,12 +66,48 @@ class Charla:
 
 
     def validar_intentos_fallidos(self, maximo_intentos_fallidos):
-        if maximo_intentos_fallidos <= self.intentos_fallidos:
-            raise IntentosFallidosException()
-        return True
+        return maximo_intentos_fallidos <= self.intentos_fallidos
+
+
+
+
+    def guardar_logs(self, logs, sesion):
+
+        lista_logs = self.formatear_logs(logs)
+
+        # crear los logs
+        return SqlRepositoryLog(sesion).add(lista_logs)
+
+
+    def setear_ultimo_nodo(self,nodo):
+        self.ultimo_nodo=nodo
+
+
+    def formatear_logs(self, logs):
+        lista_logs = []
+        for l in logs:
+            if not isinstance(l, list):
+                lista_logs.append(l)
+                continue
+            # si es una lista
+            for j in l:
+                lista_logs.append(j)
+        return lista_logs
 
 
 
 
     def finalizar_charla(self):
         self.estado = "finalizada"
+
+
+
+
+    def __repr__(self):
+        return str(self.__dict__)
+
+
+
+
+    def __str__(self):
+        return str(self.__dict__)

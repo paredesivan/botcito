@@ -1,4 +1,5 @@
-from sqlalchemy import (Table, MetaData, Column, Integer, String, SmallInteger, Boolean, ForeignKey)
+import datetime
+from sqlalchemy import (Table, MetaData, Column, Integer, String, SmallInteger, Boolean, ForeignKey, DateTime)
 from sqlalchemy.orm import mapper, relationship
 from domain.charla import Charla
 from domain.log import Log
@@ -20,11 +21,12 @@ tabla_charla = Table(
     Column('telefono_origen', String(50), nullable=False),
     Column('estado', String(20), server_default='activa', index=True),
     Column('datos', String(200), index=True),
+    Column('fecha', DateTime, index=True, default=datetime.datetime.utcnow),
     Column('telefono_destino', String(20), index=True, nullable=False),
     Column('usuario_responsable', String(50), server_default='automatico'),
     Column('intentos_fallidos', Integer, server_default='0'),
-    Column('id_modo', ForeignKey('modo.id_modo')),
-    Column('id_ultimo_nodo', ForeignKey('nodo.id'))
+    Column('id_modo', ForeignKey('modo.id_modo'), index=True),
+    Column('id_ultimo_nodo', ForeignKey('nodo.id'), index=True)
 )
 
 tabla_log = Table(
@@ -37,7 +39,8 @@ tabla_log = Table(
     Column('fecha_hora_envio', String(50)),
     Column('opcion', String(40), index=True),
     Column('estado_envio', String(20), server_default='nuevo'),
-    Column('id_charla', ForeignKey('charla.id_charla'), index=True)
+    Column('id_charla', ForeignKey('charla.id_charla'), index=True),
+    Column('id_nodo', ForeignKey('nodo.id'), index=True)
 )
 
 tabla_modo = Table(
@@ -45,16 +48,6 @@ tabla_modo = Table(
     Column('id_modo', SmallInteger, primary_key=True, index=True),
     Column('nombre', String(50), unique=True),
 )
-
-# tabla_nodo = Table(
-#     'nodo', metadata,
-#     Column('id', Integer, primary_key=True, autoincrement=True),
-#     Column('id_nodo', Integer, index=True),
-#     Column('id_padre', ForeignKey('nodo.id'), index=True, nullable=True),
-#     Column('id_modo', ForeignKey('modo.id_modo'), index=True, nullable=False),
-#     Column('orden', SmallInteger),
-#     Column('nombre_subclase', String(50),nullable=False),
-# )
 
 tabla_nodo = Table(
     'nodo', metadata,
@@ -97,7 +90,7 @@ def start_mappers():
         'ultimo_nodo': relationship(Nodo, uselist=False)
     })
 
-    mapper(Log, tabla_log)
+    mapper(Log, tabla_log, relationship(Nodo, uselist=False))
 
     mapper(Modo, tabla_modo, properties={
         'nodos': relationship(Nodo)
@@ -121,6 +114,8 @@ def start_mappers():
     })
 
     mapper(Tag, tabla_tag)
+
+
 
 
 def add_column(engine, table_name, column):

@@ -9,7 +9,7 @@ class CatalogoParametros:
     def __init__(self, sesion):
         self.sesion = sesion
 
-    def buscar(self):
+    def buscar_parametro_activo(self):
         resultado = SqlRepositoryParametro(self.sesion).get(None)
         if resultado != 0:
             return resultado

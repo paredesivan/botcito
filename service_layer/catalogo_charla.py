@@ -7,36 +7,21 @@ from single import singleton
 class CatalogoCharlas:
 
     def __init__(self, sesion):
-
-        self.sesion = sesion
+        self.SQL_REPOSITORY_CHARLAS = SqlRepositoryCharla(sesion)
         pass
 
 
 
 
     def buscar_charla_existente(self, telefono):
-        return SqlRepositoryCharla(self.sesion).buscar_charla_existente(telefono)
+        return self.SQL_REPOSITORY_CHARLAS.buscar_charla_existente(telefono)
 
 
 
 
-
-    def buscar(self, mensaje):
-        # buscar en la bd o en memoria la charla??????
-        try:
-            charla = self.sqlrepository.get(mensaje['id_charla'])
-        except:
-            raise ElementNotFoundException('no hay elemento en la bd')
-        else:  # charla es un objeto que se setea
-            return charla
+    def finalizar_charlas_viejas(self):
+        return self.SQL_REPOSITORY_CHARLAS.finalizar_charlas_viejas()
 
 
-
-
-    def actualizar(self, charla):
-        try:
-            self.sqlrepository.actualizar(charla)
-        except:
-            raise ErrorAlActualizar()
-        else:
-            return True
+    def finalizar_charla(self,id_charla):
+        return self.SQL_REPOSITORY_CHARLAS.finalizar_charla(id_charla)

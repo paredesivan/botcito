@@ -1,4 +1,4 @@
-from adapters.repository import AbstractRepository
+from adapters.sql_repository import AbstractRepository
 from domain.nodos.nodo import Nodo
 from single import singleton
 

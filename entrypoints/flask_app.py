@@ -6,6 +6,7 @@ from hilos import ejecutar_tarea
 from adapters.sql_repository_nodo import SqlRepositoryNodo
 from domain.parametro import Parametro
 
+
 sesion = inicializar_bd()
 CONTROLADOR_BOT = ControladorBot(sesion)
 
@@ -21,8 +22,6 @@ CORS(APP)
 # print(parametro.obtener_maximo_intentos_fallidos())
 # print(parametro.modo_del_parametro)
 
-# from domain.nodo import Nodo
-# print(sesion.query(Nodo).all())
 
 @APP.route('/nuevo_mensaje', methods=['POST'])
 def nuevo_mensaje():
@@ -31,15 +30,13 @@ def nuevo_mensaje():
     # devolver
     # al request-data se lo tengo que pasar limpio
 
-
     datos = request.json
 
     try:
         rta = CONTROLADOR_BOT.nuevo_mensaje(datos)
-        return jsonify(rta['Dato']), 200
+        return jsonify({"message": rta['Dato']}), 200  # puedo devolver solo el 200
     except Exception as e:
-        return jsonify({"falla": str(e)}), 400
-
+        return jsonify({"message": str(e)}), 400
 
     # return parseador.codificar(rta)\
 
@@ -48,6 +45,7 @@ def inicializar_tareas():
     pass
     # ejecutar_tarea(finalizar_charlas_viejas, (''), 600)
     # ejecutar_tarea(limpiar_tablas, (''), 600)
+    # ejecutar_tarea(reenviar_mensajes_pendientes, (''), 20)
 
 
 if __name__ == '__main__':

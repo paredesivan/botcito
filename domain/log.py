@@ -28,5 +28,5 @@ class Log:
 
 
     def seleccionado(self):
-        # deberia buscar la opcion disponible y ponerla como seleccionada
+        # deberia buscar_parametro_activo la opcion disponible y ponerla como seleccionada
         pass

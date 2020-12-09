@@ -13,6 +13,7 @@
    lo que este en la relationship si se podra obtener. de alguna manera lo guarda en la bd.
  * habria que ver si tambien es recomensable poner la instancia en la clase, creo que si es recomendable
  * todo_ lo que ponga en las tablas aparecera en la tabla (sin importar si en la clase hay mas atributos)
+ * solo tendran mappers los que tengan clases
 
 ##foraneas
  * las claves foraneas deberian ser indices para mejorar rendimiento en los joins
@@ -28,7 +29,7 @@
  * NO SE DEBE declarar una columna en la tabla con el nombre de la relationship
  * si a la relacion le pongo backref="tablaActual" significa que TAMBIEN desde la otra tabla
    podre acceder a mi objeto mediante el atributo "tablaActual"
- * interpreto que siempre es recomensable usar backref, asi es mas facil si lo necesito
+ * interpreto que siempre es recomensable usar backref, asi es mas facil si lo necesito. no se hasta que punto es performante
  * OJO NO SE HASTA QUE PUNTO SON BUENAS. AGREGAN MUCHOS COSAS DE LAS CUALES DEPENDER
  * supongo que cuando hace el add o el commit, busca los atributos en las tablas y los compara con los que tiene actualmente
    la clase e inserta los que coinciden nomas, si falta alguno en la clase tira error porque insertaria un null

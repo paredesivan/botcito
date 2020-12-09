@@ -1,4 +1,4 @@
-from adapters.repository import AbstractRepository
+from adapters.sql_repository import AbstractRepository
 from domain.tag import Tag
 from single import singleton
 

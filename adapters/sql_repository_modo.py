@@ -1,4 +1,4 @@
-from adapters.repository import AbstractRepository
+from adapters.sql_repository import AbstractRepository
 from domain.modo import Modo
 from single import singleton
 
