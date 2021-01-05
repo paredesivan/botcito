@@ -33,7 +33,7 @@
  * OJO NO SE HASTA QUE PUNTO SON BUENAS. AGREGAN MUCHOS COSAS DE LAS CUALES DEPENDER
  * supongo que cuando hace el add o el commit, busca los atributos en las tablas y los compara con los que tiene actualmente
    la clase e inserta los que coinciden nomas, si falta alguno en la clase tira error porque insertaria un null
- * parece que si hay relacion tiene que haber una fk, me lo dijo el modo debug 
+ * parece que si hay relacion tiene que haber una fk, me lo dijo el modo debug !!!!
 ```
 tabla_charla = Table(
     'charla', metadata,

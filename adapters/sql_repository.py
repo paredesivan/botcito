@@ -1,14 +1,6 @@
-from abc import ABC, abstractmethod
-
-
-class AbstractRepository(ABC):
-    @abstractmethod
-    def add(self, element):
-        raise NotImplementedError
-
-
-
-
-    @abstractmethod
-    def get(self, reference):
-        raise NotImplementedError
+from adapters.abstract_repository import AbstractRepository
+class SqlRepository(AbstractRepository):
+    def add(self, id_charla):
+        pass
+    def get(self,charla):
+        pass

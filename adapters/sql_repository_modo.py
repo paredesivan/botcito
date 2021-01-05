@@ -1,9 +1,9 @@
-from adapters.sql_repository import AbstractRepository
+from adapters.sql_repository import SqlRepository
 from domain.modo import Modo
 from single import singleton
 
 @singleton
-class SqlRepositoryModo(AbstractRepository):
+class SqlRepositoryModo(SqlRepository):
 
     def __init__(self, session):
         super().__init__()

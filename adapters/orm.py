@@ -7,10 +7,10 @@ from domain.modo import Modo
 from domain.nodos.nodo import Nodo
 from domain.parametro import Parametro
 from domain.tag import Tag
-from domain.nodos.direccion_mapa import DireccionMapa
-from domain.nodos.ingresar_direccion import IngresarDireccion
-from domain.nodos.seleccionar_direccion import SeleccionarDireccion
-from domain.nodos.saludo import Saludo
+from domain.nodos.hijos.direccion_mapa import DireccionMapa
+from domain.nodos.hijos.ingresar_direccion import IngresarDireccion
+from domain.nodos.hijos.seleccionar_direccion import SeleccionarDireccion
+from domain.nodos.hijos.saludo import Saludo
 
 
 metadata = MetaData()
@@ -25,8 +25,8 @@ tabla_charla = Table(
     Column('telefono_destino', String(20), index=True, nullable=False),
     Column('usuario_responsable', String(50), server_default='automatico'),
     Column('intentos_fallidos', Integer, server_default='0'),
-    Column('id_modo', ForeignKey('modo.id_modo'), index=True),
-    Column('id_ultimo_nodo', ForeignKey('nodo.id'), index=True)
+    Column('id_ultimo_nodo', ForeignKey('nodo.id'), index=True),
+    Column('id_modo', ForeignKey('modo.id_modo'))
 )
 
 tabla_log = Table(
@@ -45,8 +45,8 @@ tabla_log = Table(
 
 tabla_modo = Table(
     'modo', metadata,
-    Column('id_modo', SmallInteger, primary_key=True, index=True),
-    Column('nombre', String(50), unique=True),
+    Column('id_modo', Integer, primary_key=True, index=True),
+    Column('nombre', String(50))
 )
 
 tabla_nodo = Table(
@@ -57,13 +57,7 @@ tabla_nodo = Table(
     Column('id_modo', ForeignKey('modo.id_modo'), index=True, nullable=False),
     Column('orden', SmallInteger),
     Column('nombre_subclase', String(50), nullable=False),
-)
-
-# no existe esta clase
-tabla_nodo_tag = Table(
-    'nodo_tag', metadata,
-    Column('id_nodo', ForeignKey('nodo.id'), primary_key=True, index=True),
-    Column('id_tag', ForeignKey('tag.id_tag'), primary_key=True, index=True),
+    Column('id_tag', ForeignKey('tag.id_tag'), index=True, nullable=True),
 )
 
 tabla_parametro = Table(
@@ -79,7 +73,7 @@ tabla_tag = Table(
     'tag', metadata,
     Column('id_tag', String(20), primary_key=True, index=True),
     Column('texto', String(200), nullable=False),
-    Column('texto_para_usuario', String(30), nullable=True),
+    Column('texto_para_usuario', String(200), nullable=True),
 )
 
 
@@ -90,18 +84,19 @@ def start_mappers():
         'ultimo_nodo': relationship(Nodo, uselist=False)
     })
 
-    mapper(Log, tabla_log, relationship(Nodo, uselist=False))
-
-    mapper(Modo, tabla_modo, properties={
-        'nodos': relationship(Nodo)
+    mapper(Log, tabla_log, properties={
+        'nodo': relationship(Nodo, uselist=False)
     })
+
+    mapper(Modo, tabla_modo)
 
     nodo_mapper = mapper(Nodo, tabla_nodo,
                          polymorphic_on=tabla_nodo.c.nombre_subclase,
                          polymorphic_identity='nodo',
                          properties={
                              'hijos': relationship(Nodo),
-                             'tags': relationship(Tag, secondary=tabla_nodo_tag)
+                             'modo': relationship(Modo, uselist=False),
+                             'tag': relationship(Tag, uselist=False)
                          })
 
     mapper(Saludo, inherits=nodo_mapper, polymorphic_identity='Saludo')
@@ -109,13 +104,9 @@ def start_mappers():
     mapper(SeleccionarDireccion, inherits=nodo_mapper, polymorphic_identity='SeleccionarDireccion')
     mapper(IngresarDireccion, inherits=nodo_mapper, polymorphic_identity='IngresarDireccion')
 
-    mapper(Parametro, tabla_parametro, properties={
-        'modo': relationship(Modo, uselist=False)
-    })
+    mapper(Parametro, tabla_parametro)
 
     mapper(Tag, tabla_tag)
-
-
 
 
 def add_column(engine, table_name, column):

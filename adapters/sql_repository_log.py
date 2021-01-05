@@ -1,10 +1,10 @@
-from adapters.sql_repository import AbstractRepository
+from adapters.sql_repository import SqlRepository
 from domain.log import Log
 from single import singleton
 
 
 @singleton
-class SqlRepositoryLog(AbstractRepository):
+class SqlRepositoryLog(SqlRepository):
 
     def __init__(self, session):
         super().__init__()

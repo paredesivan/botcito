@@ -1,6 +1,4 @@
-from typing import Set
 from domain.excepciones import IntentosFallidosException, CharlaInactiva
-from domain.log import Log
 from adapters.sql_repository_log import SqlRepositoryLog
 
 
@@ -26,12 +24,13 @@ class Charla:
         self.datos = datos
         self.logs = list()
         self.ultimo_nodo = ultimo_nodo
-        self.id_ultimo_nodo = ultimo_nodo.id
+        self.id_ultimo_nodo = ultimo_nodo.id #solo para la bade de datos
+
 
 
 
     def obtener_arbol(self):
-        return self.modo.nodos
+        return self.modo.arbol
 
 
 
@@ -79,8 +78,12 @@ class Charla:
         return SqlRepositoryLog(sesion).add(lista_logs)
 
 
-    def setear_ultimo_nodo(self,nodo):
-        self.ultimo_nodo=nodo
+
+
+    def setear_ultimo_nodo(self, nodo):
+        self.ultimo_nodo = nodo
+
+
 
 
     def formatear_logs(self, logs):

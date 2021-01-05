@@ -67,9 +67,9 @@ class ControladorBot:
 
         menu = self.procesar_menu(log)
 
-        self.charla_actual.guardar_logs(menu,self.sesion)
+        self.charla_actual.guardar_logs(menu, self.sesion)
 
-        # hago un solo comit para garantizar integridad
+        # hago un solo commit al final para garantizar integridad
         self.sesion.commit()
         self.sesion.close()
 

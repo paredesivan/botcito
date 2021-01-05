@@ -1,9 +1,9 @@
-from adapters.sql_repository import AbstractRepository
+from adapters.sql_repository import SqlRepository
 from domain.parametro import Parametro
 
 from single import singleton
 @singleton
-class SqlRepositoryParametro(AbstractRepository):
+class SqlRepositoryParametro(SqlRepository):
 
     def __init__(self, session):
         super().__init__()
