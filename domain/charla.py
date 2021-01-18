@@ -24,7 +24,7 @@ class Charla:
         self.datos = datos
         self.logs = list()
         self.ultimo_nodo = ultimo_nodo
-        self.id_ultimo_nodo = ultimo_nodo.id #solo para la bade de datos
+        self.id_ultimo_nodo = ultimo_nodo.id  # solo para la base de datos
 
 
 
@@ -88,20 +88,20 @@ class Charla:
 
     def formatear_logs(self, logs):
         lista_logs = []
-        for l in logs:
-            if not isinstance(l, list):
-                lista_logs.append(l)
+        for log in logs:
+            if not isinstance(log, list):
+                lista_logs.append(log)
                 continue
             # si es una lista
-            for j in l:
+            for j in log:
                 lista_logs.append(j)
         return lista_logs
 
 
 
 
-    def finalizar_charla(self):
-        self.estado = "finalizada"
+    def set_estado(self,estado):
+        self.estado = estado
 
 
 

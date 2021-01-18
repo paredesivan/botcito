@@ -10,22 +10,6 @@ Session = inicializar_bd()
 # flask_app.APP.run()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # funciona perfecto
 # charla = Charla("inactiva", "3", "4", "5", "6")
 # charla.logs.append(Log(3, "43", False, "hola", "123", "1", "nuevo"))

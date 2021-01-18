@@ -37,7 +37,8 @@ class ControladorBot:
 
 
     def existe_charla(self):
-        return self.charla_actual is not None and self.charla_actual != 0
+        # devuelve true si existe
+        return not self.charla_actual
 
 
 
@@ -63,8 +64,10 @@ class ControladorBot:
             self.crear_charla(mensaje)
             self.charla_actual.procesar_nodo()
 
-        log = self.charla_actual.obtener_log(self.charla_actual.id_charla, mensaje['opcion'])
-
+        try:
+            log = self.charla_actual.obtener_log(self.charla_actual.id_charla, mensaje['opcion'])
+        except Exception as error:
+            raise ElementoVacio("lero lero %s"%error)
         menu = self.procesar_menu(log)
 
         self.charla_actual.guardar_logs(menu, self.sesion)
