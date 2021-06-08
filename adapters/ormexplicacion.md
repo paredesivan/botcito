@@ -1,39 +1,45 @@
 # Tips de ORM
 
-##mapping
- * usa el modo clasiccal mapping, pero despues usa los mappers para poder enlazar las clases con las tablas
- * si o si aca tiene que haber un primary key por tabla. sino tira error el test
- * es mas facil despues usar alembicsi uso el clasical mapping
- * la forma de definir las tablas son como las de core schema pero dps hace el mapeo y queda usando el schema orm
- * todas las columnas son nuleables por defecto excepto las primary key
- * las primary key NO son indices por defecto
- * los autoincrements de las tablas no necesitan estar en la clase. es mas, no se como se pondrian
- * las clases pueden tener sus propios campos sin estar enlazados a columnas en tablas.
-    tener cuidado que si no esta en la tabla, no lo recuperara al hacer la consulta a la bd
-   lo que este en la relationship si se podra obtener. de alguna manera lo guarda en la bd.
- * habria que ver si tambien es recomensable poner la instancia en la clase, creo que si es recomendable
- * todo_ lo que ponga en las tablas aparecera en la tabla (sin importar si en la clase hay mas atributos)
- * solo tendran mappers los que tengan clases
+## mapping
 
-##foraneas
- * las claves foraneas deberian ser indices para mejorar rendimiento en los joins
- * fk evita redundancia datos
- * fk garantiza integridad
- * la clave foranea declarada en la tabla tambien DEBE ser un atributo en la clase
+* usa el modo clasiccal mapping, pero despues usa los mappers para poder enlazar las clases con las tablas
+* si o si aca tiene que haber un primary key por tabla. sino tira error el test
+* es mas facil despues usar alembicsi uso el clasical mapping
+* la forma de definir las tablas son como las de core schema pero dps hace el mapeo y queda usando el schema orm
+* todas las columnas son nuleables por defecto excepto las primary key
+* las primary key NO son indices por defecto
+* los autoincrements de las tablas no necesitan estar en la clase. es mas, no se como se pondrian. pero son parte del
+  ooad, creo que es mejor ponerlas
+* las clases pueden tener sus propios campos sin estar enlazados a columnas en tablas. tener cuidado que si no esta en
+  la tabla, no lo recuperara al hacer la consulta a la bd lo que este en la relationship si se podra obtener. de alguna
+  manera lo guarda en la bd.
+* habria que ver si tambien es recomensable poner la instancia en la clase, creo que si es recomendable
+* todo_ lo que ponga en las tablas aparecera en la tabla (sin importar si en la clase hay mas atributos)
+* solo tendran mappers los que tengan clases
 
-##relationship
- * el relationship se puede poner en el lado del 1 o del muchos o de ambos!
- * es una relacion. no es una columna de la tabla!
-   sirve para acceder al/a los objeto/s relacionado/s.
-   es mas lento en teoria (no mucho), pero mejor y mas facil
- * NO SE DEBE declarar una columna en la tabla con el nombre de la relationship
- * si a la relacion le pongo backref="tablaActual" significa que TAMBIEN desde la otra tabla
-   podre acceder a mi objeto mediante el atributo "tablaActual"
- * interpreto que siempre es recomensable usar backref, asi es mas facil si lo necesito. no se hasta que punto es performante
- * OJO NO SE HASTA QUE PUNTO SON BUENAS. AGREGAN MUCHOS COSAS DE LAS CUALES DEPENDER
- * supongo que cuando hace el add o el commit, busca los atributos en las tablas y los compara con los que tiene actualmente
-   la clase e inserta los que coinciden nomas, si falta alguno en la clase tira error porque insertaria un null
- * parece que si hay relacion tiene que haber una fk, me lo dijo el modo debug !!!!
+## foraneas
+
+* las claves foraneas deberian ser indices para mejorar rendimiento en los joins
+* fk evita redundancia datos
+* fk garantiza integridad
+* la clave foranea declarada en la tabla tambien DEBE ser un atributo en la clase
+
+## relationship
+
+* el relationship se puede poner en el lado del 1 o del muchos o de ambos!
+* es una relacion. no es una columna de la tabla!
+  sirve para acceder al/a los objeto/s relacionado/s. es mas lento en teoria (no mucho), pero mejor y mas facil
+* NO SE DEBE declarar una columna en la tabla con el nombre de la relationship
+* si a la relacion le pongo backref="tablaActual" significa que TAMBIEN desde la otra tabla podre acceder a mi objeto
+  mediante el atributo "tablaActual"
+* interpreto que siempre es recomensable usar backref, asi es mas facil si lo necesito. no se hasta que punto es
+  performante
+* OJO NO SE HASTA QUE PUNTO SON BUENAS. AGREGAN MUCHOS COSAS DE LAS CUALES DEPENDER
+* supongo que cuando hace el add o el commit, busca los atributos en las tablas y los compara con los que tiene
+  actualmente la clase e inserta los que coinciden nomas, si falta alguno en la clase tira error porque insertaria un
+  null
+* parece que si hay relacion tiene que haber una fk, me lo dijo el modo debug !!!!
+
 ```
 tabla_charla = Table(
     'charla', metadata,

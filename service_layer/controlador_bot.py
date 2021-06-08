@@ -8,13 +8,16 @@ from adapters.sql_repository_nodo import SqlRepositoryNodo
 from adapters.sql_repository_tag import SqlRepositoryTag
 
 
-def es_mensaje_invalido(mensaje):
+def es_mensaje_valido(mensaje):
     return mensaje is None
 
 
 @singleton
 class ControladorBot:
     def __init__(self, sesion):
+
+        # los repositorios tendrian que venir como parametro, haciendo uso del patron adapter
+        # https://refactoring.guru/es/design-patterns/adapter/python/example
 
         self.CATALOGO_CHARLA = CatalogoCharlas(sesion)
         self.CATALOGO_PARAMETROS = CatalogoParametros(sesion)
@@ -51,7 +54,7 @@ class ControladorBot:
 
     def nuevo_mensaje(self, mensaje):
 
-        if es_mensaje_invalido(mensaje):
+        if not es_mensaje_valido(mensaje):
             raise ElementoVacio("no hay mensaje")
 
         # mensaje es una palabra reservada de airtrack
